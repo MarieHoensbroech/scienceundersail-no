@@ -14,8 +14,7 @@
         <span class="icon-bar"></span>
       </button>
 
-      <!-- Site/brand title -->
-      <a class="navbar-brand page-scroll" href="#page-top" title="Til toppen">
+      <a class="navbar-brand page-scroll" href="#page-top">
         {{ site.title | default: "Science under Sail" }}
       </a>
     </div>
@@ -23,49 +22,37 @@
     <!-- Collapsible content -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-
-        <!-- Primary section links -->
         <li><a class="page-scroll" href="#about"     title="Om oss">Om oss</a></li>
         <li><a class="page-scroll" href="#fleet"     title="Flåten">Flåten</a></li>
         <li><a class="page-scroll" href="#portfolio" title="Tjenester">Tjenester</a></li>
         <li><a class="page-scroll" href="#profiles"  title="Referanser">Referanser</a></li>
         <li><a class="page-scroll" href="#contact"   title="Kontakt">Kontakt</a></li>
 
-        {%- comment -%}
-        Language targets for the .no site
-        - nb_url → current page on .no (self)
-        - en_url → counterpart on .org (same path unless page.alt_en is provided)
-        {%- endcomment -%}
-        {%- assign nb_url = page.url | absolute_url -%}
-        {%- if page.alt_en -%}
-          {%- assign en_url = page.alt_en -%}
-        {%- else -%}
-          {%- assign en_url = 'https://scienceundersail.org' | append: page.url -%}
-        {%- endif -%}
+        {% comment %} NO site: compute language targets {% endcomment %}
+        {% assign nb_url = page.url | absolute_url %}
+        {% if page.alt_en %}
+          {% assign en_url = page.alt_en %}
+        {% else %}
+          {% assign en_url = 'https://scienceundersail.org' | append: page.url %}
+        {% endif %}
 
         <!-- Language dropdown (globe) -->
         <li class="dropdown navbar-lang">
-          #
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+             aria-haspopup="true" aria-expanded="false" aria-label="Language">
             <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
             <span class="caret"></span>
           </a>
-
           <ul class="dropdown-menu dropdown-menu-right">
-            {%- if page.lang == "en" -%}
-              <li class="active">{{ en_url }}English <span class="lang-check">✓</span></a></li>
-            {%- else -%}
-              <li>{{ en_url }}English</a></li>
-            {%- endif -%}
-
-            {%- if page.lang == "nb" -%}
-              <li class="active">{{ nb_url }}Norsk <span class="lang-check">✓</span></a></li>
-            {%- else -%}
-              <li>{{ nb_url }}Norsk</a></li>
-            {%- endif -%}
+            {% if page.lang == "en" %}
+              <li class="active"><a href="{{ en_url }}">English <span class="lang-check">✓</span></a></li>
+            {% else %}
+              <li><a href="{{ en_url }}">English</a></li>
+            {% endif %}
+            {% if page.lang == "nb" %}
+              <li class="active"><a href="{{ nb_url }}">Norsk <span class="lang-check">✓</span></a></li>
+            {% else %}
+              <li><a href="{{ nb_url }}">Norsk</a></li>
+            {% endif %}
           </ul>
         </li>
-      </ul>
-    </div>
-
-  </div>
-</nav>
