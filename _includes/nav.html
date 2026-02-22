@@ -5,7 +5,7 @@
       <button type="button" class="navbar-toggle collapsed"
               data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
               aria-expanded="false" aria-controls="bs-example-navbar-collapse-1">
-        <span class="sr-only">Veksle navigasjon</span>
+        <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
@@ -18,51 +18,39 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><a class="page-scroll" href="#about">Om oss</a></li>
-        <li><a class="page-scroll" href="#fleet">Flåten</a></li>
-        <li><a class="page-scroll" href="#portfolio">Tjenester</a></li>
-        <li><a class="page-scroll" href="#profiles">Referanser</a></li>
-        <li><a class="page-scroll" href="#contact">Kontakt</a></li>
+        <li><a class="page-scroll" href="#about">About</a></li>
+        <li><a class="page-scroll" href="#fleet">Fleet</a></li>
+        <li><a class="page-scroll" href="#portfolio">Services</a></li>
+        <li><a class="page-scroll" href="#profiles">References</a></li>
+        <li><a class="page-scroll" href="#contact">Contact</a></li>
 
-        <!-- Språk (globus) -->
-        <li class="dropdown navbar-lang">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-             aria-haspopup="true" aria-expanded="false" aria-label="Språk">
-            <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
-            <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu dropdown-menu-right">
+        <!-- Language dropdown (globe icon) -->
+<li class="dropdown navbar-lang">
+  #
+    <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu dropdown-menu-right">
 
-            {%- comment -%}
-            Cross‑domain English target:
-            Use per‑page override `alt_en` if present; otherwise mirror the same `page.url`.
-            {%- endcomment -%}
-            {%- assign en_url = page.alt_en | default: 'https://scienceundersail.org' | append: (page.alt_en ? '' : page.url) -%}
-            {%- if page.lang == "en" -%}
-              <li class="active">
-                <a href="{{ en_url }}">English <span class="lang-check">✓</span></a>
-              </li>
-            {%- else -%}
-              <li><a href="{{ en_url }}">English</a></li>
-            {%- endif -%}
+    {%- comment -%}
+    English target on .org:
+    - Per‑page override: alt_en: "https://scienceundersail.org/different/path/"
+    - Otherwise, mirror the same path across domains.
+    {%- endcomment -%}
+    {%- assign en_url = page.alt_en | default: 'https://scienceundersail.org' | append: (page.alt_en ? '' : page.url) -%}
+    {%- if page.lang == "en" -%}
+      <li class="active">{{ en_url }}English <span class="lang-check">✓</span></a></li>
+    {%- else -%}
+      <li>{{ en_url }}English</a></li>
+    {%- endif -%}
 
-            {%- comment -%}
-            Current language: Norsk (.no)
-            Self URL = absolute URL for this page on .no
-            {%- endcomment -%}
-            {%- assign nb_url = page.url | absolute_url -%}
-            {%- if page.lang == "nb" -%}
-              <li class="active">
-                <a href="{{ nb_url }}">Norsk <span class="lang-check">✓</span></a>
-              </li>
-            {%- else -%}
-              <li><a href="{{ nb_url }}">Norsk</a></li>
-            {%- endif -%}
+    {%- comment -%}Current page on .no (Norsk){%- endcomment -%}
+    {%- assign nb_url = page.url | absolute_url -%}
+    {%- if page.lang == "nb" -%}
+      <li class="active">{{ nb_url }}Norsk <span class="lang-check">✓</span></a></li>
+    {%- else -%}
+      <li>{{ nb_url }}Norsk</a></li>
+    {%- endif -%}
 
-          </ul>
-        </li>
-      </ul>
-    </div>
-
-  </div>
-</nav>
+  </ul>
+</li>
