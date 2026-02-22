@@ -1,0 +1,7 @@
+{%- comment -%}
+NO site (.no) → EN site (.org) language switch.
+Optional front matter override:
+alt_en: "https://scienceundersail.org/custom/path/"
+{%- endcomment -%}
+{% assign en_url = page.alt_en | default: 'https://scienceundersail.org' | append: (page.alt_en ? '' : page.url) %}
+<a class="lang lang-en" href="{{ en_url | escape }}">English</a>
