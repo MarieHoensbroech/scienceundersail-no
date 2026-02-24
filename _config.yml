@@ -2,7 +2,7 @@
 title: Science under Sail
 description: >-
   Non-profit field science from sea to summit: ecological fieldwork, data analysis,
-  and expedition support from sailboats in Scandinavia and Spain.
+  and expedition support from sailboats in Scandinavia and Europe.
 # Omit baseurl when the site is at the domain root (or keep it as an empty string)
 # baseurl: ""    # only needed for subpath deployments like /project
 url: "https://scienceundersail.no"
