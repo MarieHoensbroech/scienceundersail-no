@@ -17,7 +17,7 @@
         <span class="icon-bar"></span>
       </button>
 
-      {{ '/' | relative_url }}
+      {{ site.baseurl }}/
         {{ site.title | default: "Science under Sail" }}
       </a>
     </div>
@@ -31,21 +31,21 @@
 
         <!-- About -->
         <li>
-          {{ '/#about' | relative_url }}
+          {{ site.baseurl }}/#about
             Om oss
           </a>
         </li>
 
         <!-- Fleet dropdown -->
         <li class="dropdown fleet-dropdown">
-          {{ '/#fleet' | relative_url }}
+          #
             Flåten
             <span class="caret"></span>
           </a>
 
           <ul class="dropdown-menu">
             <li>
-              {{ '/#fleet' | relative_url }}
+              {{ site.baseurl }}/#fleet
                 Oversikt over flåten
               </a>
             </li>
@@ -53,14 +53,14 @@
             <li role="separator" class="divider"></li>
 
             <li>
-              {{ '/vildanden/' | relative_url }}
+              {{ site.baseurl }}/vildanden/
                 Vildanden Kystlaboratorium
                 <small>Forskning fra havbunn til fjell</small>
               </a>
             </li>
 
             <li>
-              {{ '/salka-valka/' | relative_url }}
+              {{ site.baseurl }}/salka-valka/
                 Salka Valka
                 <small>Forskning under seil, fra Norge til verden</small>
               </a>
@@ -70,38 +70,24 @@
 
         <!-- Services -->
         <li>
-          {{ '/#portfolio' | relative_url }}
+          {{ site.baseurl }}/#portfolio
             Tjenester
           </a>
         </li>
 
         <!-- References -->
         <li>
-          {{ '/#profiles' | relative_url }}
+          {{ site.baseurl }}/#profiles
             Referanser
           </a>
         </li>
 
         <!-- Contact -->
         <li>
-          {{ '/#contact' | relative_url }}
+          {{ site.baseurl }}/#contact
             Kontakt
           </a>
         </li>
-
-        {% comment %}
-          Compute language targets.
-          A page-specific English URL can be set with alt_en
-          in the page front matter.
-        {% endcomment %}
-
-        {% assign nb_url = page.url | absolute_url %}
-
-        {% if page.alt_en %}
-          {% assign en_url = page.alt_en %}
-        {% else %}
-          {% assign en_url = 'https://scienceundersail.org' | append: page.url %}
-        {% endif %}
 
         <!-- Language dropdown -->
         <li class="dropdown navbar-lang">
@@ -114,15 +100,22 @@
           </a>
 
           <ul class="dropdown-menu dropdown-menu-right">
-            {% if page.lang == "en" %}
-              <li class="active">
-                {{ en_url }}
-                  English
-                  <span class="lang-check">✓</span>
-                </a>
-              </li>
-            {% else %}
-              <li>
-                {{ en_url }}English</a>
-              </li>
-            {% endif %
+            <li>
+              <a href="https://scienceundersail.org/">
+                English
+              </a>
+            </li>
+
+            <li class="active">
+              {{ site.baseurl }}/
+                Norsk
+                <span class="lang-check">✓</span>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
