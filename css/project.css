@@ -76,6 +76,8 @@
   margin-top: 35px;
   margin-bottom: 15px;
   color: #333333;
+  font-size: 23px;
+  line-height: 1.35;
 }
 
 .project-content p {
@@ -98,6 +100,55 @@
 .project-content a:hover,
 .project-content a:focus {
   color: #d94c30;
+}
+
+.project-content img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  margin: 35px auto;
+}
+
+.project-content blockquote {
+  margin: 35px 0;
+  padding: 15px 25px;
+  border-left: 4px solid #f05f40;
+  color: #555555;
+  font-size: 19px;
+}
+
+.fleet-dropdown .dropdown-menu {
+  min-width: 300px;
+}
+
+.fleet-dropdown .dropdown-menu > li > a {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  white-space: normal;
+}
+
+.fleet-dropdown .dropdown-menu small {
+  display: block;
+  margin-top: 3px;
+  color: #777777;
+  font-size: 11px;
+  line-height: 1.35;
+}
+
+.fleet-dropdown .dropdown-menu > li > a:hover small,
+.fleet-dropdown .dropdown-menu > li > a:focus small {
+  color: inherit;
+}
+
+@media (min-width: 768px) {
+  .navbar-nav .fleet-dropdown:hover > .dropdown-menu {
+    display: block;
+  }
+
+  .navbar-nav .fleet-dropdown:hover > a {
+    background-color: rgba(255, 255, 255, 0.08);
+  }
 }
 
 @media (max-width: 767px) {
@@ -123,5 +174,13 @@
   .project-content h2 {
     margin-top: 45px;
     font-size: 26px;
+  }
+
+  .project-content h3 {
+    font-size: 21px;
+  }
+
+  .fleet-dropdown .dropdown-menu {
+    min-width: 100%;
   }
 }
