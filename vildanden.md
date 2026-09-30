@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: front
 title: Vildanden Kystlaboratorium
 permalink: /vildanden/
 ---
