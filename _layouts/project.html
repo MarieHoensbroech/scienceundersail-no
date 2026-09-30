@@ -1,29 +1,33 @@
+---
+---
+
 <!DOCTYPE html>
 <html lang="no">
 
 {% include head.html %}
 
+<head>
   {{ '/css/project.css' | relative_url }}
+</head>
 
 <body id="page-top">
 
   {% include nav.html %}
 
   <header class="project-header">
-    <div class="header-content">
-      <div class="header-content-inner">
-        <h1>{{ page.title }}</h1>
-        {% if page.subtitle %}
-        <hr>
+    <div class="project-header-content">
+      <h1>{{ page.title }}</h1>
+
+      {% if page.subtitle %}
+        <hr class="primary">
         <p>{{ page.subtitle }}</p>
-        {% endif %}
-      </div>
+      {% endif %}
     </div>
   </header>
 
-<main class="project-content">
-  {{ content }}
-</main>
+  <main class="project-content">
+    {{ content }}
+  </main>
 
   {% include scripts.html %}
 
