@@ -1,3 +1,38 @@
+<style>
+  @media (min-width: 768px) {
+    .navbar-nav .fleet-dropdown:hover > .dropdown-menu {
+      display: block;
+    }
+
+    .navbar-nav .fleet-dropdown:hover > a {
+      background-color: rgba(255, 255, 255, 0.08);
+    }
+  }
+
+  .fleet-dropdown .dropdown-menu {
+    min-width: 300px;
+  }
+
+  .fleet-dropdown .dropdown-menu > li > a {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    white-space: normal;
+  }
+
+  .fleet-dropdown .dropdown-menu small {
+    display: block;
+    margin-top: 3px;
+    color: #777777;
+    font-size: 11px;
+    line-height: 1.35;
+  }
+
+  .fleet-dropdown .dropdown-menu > li > a:hover small,
+  .fleet-dropdown .dropdown-menu > li > a:focus small {
+    color: inherit;
+  }
+</style>
+
 <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
   <div class="container-fluid">
 
@@ -22,7 +57,7 @@
       </a>
     </div>
 
-    <!-- Collapsible navigation -->
+    <!-- Collapsible content -->
     <div
       class="collapse navbar-collapse"
       id="bs-example-navbar-collapse-1"
@@ -89,6 +124,18 @@
           </a>
         </li>
 
+        {% comment %}
+        Compute language targets
+        {% endcomment %}
+
+        {% assign nb_url = page.url | absolute_url %}
+
+        {% if page.alt_en %}
+          {% assign en_url = page.alt_en %}
+        {% else %}
+          {% assign en_url = "https://scienceundersail.org" | append: page.url %}
+        {% endif %}
+
         <!-- Language dropdown -->
         <li class="dropdown navbar-lang">
           #
@@ -100,21 +147,35 @@
           </a>
 
           <ul class="dropdown-menu dropdown-menu-right">
-            <li>
-              <a
-                href="https://scienceundersail.org/"
-                title="English"
-              >
-                English
-              </a>
-            </li>
+            {% if page.lang == "en" %}
+              <li class="active">
+                {{ en_url }}
+                  English
+                  <span class="lang-check">✓</span>
+                </a>
+              </li>
+            {% else %}
+              <li>
+                {{ en_url }}
+                  English
+                </a>
+              </li>
+            {% endif %}
 
-            <li class="active">
-              {{ site.baseurl }}/
-                Norsk
-                <span class="lang-check">✓</span>
-              </a>
-            </li>
+            {% if page.lang == "nb" %}
+              <li class="active">
+                {{ nb_url }}
+                  Norsk
+                  <span class="lang-check">✓</span>
+                </a>
+              </li>
+            {% else %}
+              <li>
+                {{ nb_url }}
+                  Norsk
+                </a>
+              </li>
+            {% endif %}
           </ul>
         </li>
 
