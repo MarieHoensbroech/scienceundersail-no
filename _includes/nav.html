@@ -1,25 +1,21 @@
 <style>
   @media (min-width: 768px) {
-    .navbar-nav .fleet-dropdown:hover > .dropdown-menu {
+    .navbar-nav .site-dropdown:hover > .dropdown-menu {
       display: block;
     }
-
-    .navbar-nav .fleet-dropdown:hover > a {
-      background-color: rgba(255, 255, 255, 0.08);
-    }
   }
 
-  .fleet-dropdown .dropdown-menu {
-    min-width: 300px;
+  .site-dropdown .dropdown-menu {
+    min-width: 285px;
   }
 
-  .fleet-dropdown .dropdown-menu > li > a {
+  .site-dropdown .dropdown-menu > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
     white-space: normal;
   }
 
-  .fleet-dropdown .dropdown-menu small {
+  .site-dropdown .dropdown-menu small {
     display: block;
     margin-top: 3px;
     color: #777777;
@@ -27,8 +23,8 @@
     line-height: 1.35;
   }
 
-  .fleet-dropdown .dropdown-menu > li > a:hover small,
-  .fleet-dropdown .dropdown-menu > li > a:focus small {
+  .site-dropdown .dropdown-menu > li > a:hover small,
+  .site-dropdown .dropdown-menu > li > a:focus small {
     color: inherit;
   }
 </style>
@@ -64,15 +60,36 @@
     >
       <ul class="nav navbar-nav navbar-right">
 
-        <!-- About -->
-        <li>
-          {{ site.baseurl }}/#about
+        <!-- About dropdown -->
+        <li class="dropdown site-dropdown">
+          #
             Om oss
+            <span class="caret"></span>
           </a>
+
+          <ul class="dropdown-menu">
+            <li>
+              {{ site.baseurl }}/#about
+                Kort om Science under Sail
+              </a>
+            </li>
+
+            <li>
+              {{ site.baseurl }}/om-oss/
+                Om organisasjonen
+              </a>
+            </li>
+
+            <li>
+              {{ site.baseurl }}/bli-med/
+                Bli medlem eller frivillig
+              </a>
+            </li>
+          </ul>
         </li>
 
         <!-- Fleet dropdown -->
-        <li class="dropdown fleet-dropdown">
+        <li class="dropdown site-dropdown">
           #
             Flåten
             <span class="caret"></span>
@@ -106,14 +123,21 @@
         <!-- Services -->
         <li>
           {{ site.baseurl }}/#portfolio
-            Tjenester
+            Dette gjør vi
           </a>
         </li>
 
         <!-- References -->
         <li>
           {{ site.baseurl }}/#profiles
-            Referanser
+            Resultater
+          </a>
+        </li>
+
+        <!-- Join -->
+        <li>
+          {{ site.baseurl }}/bli-med/
+            Bli med
           </a>
         </li>
 
