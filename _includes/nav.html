@@ -3,59 +3,126 @@
 
     <!-- Brand and hamburger -->
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed"
-              data-toggle="collapse"
-              data-target="#bs-example-navbar-collapse-1"
-              aria-expanded="false"
-              aria-controls="bs-example-navbar-collapse-1">
+      <button
+        type="button"
+        class="navbar-toggle collapsed"
+        data-toggle="collapse"
+        data-target="#bs-example-navbar-collapse-1"
+        aria-expanded="false"
+        aria-controls="bs-example-navbar-collapse-1"
+      >
         <span class="sr-only">Veksle navigasjon</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand page-scroll" href="#page-top">
+
+      {{ '/' | relative_url }}
         {{ site.title | default: "Science under Sail" }}
       </a>
     </div>
 
     <!-- Collapsible content -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <div
+      class="collapse navbar-collapse"
+      id="bs-example-navbar-collapse-1"
+    >
       <ul class="nav navbar-nav navbar-right">
-        <li><a class="page-scroll" href="#about"     title="Om oss">Om oss</a></li>
-        <li><a class="page-scroll" href="#fleet"     title="Flåten">Flåten</a></li>
-        <li><a class="page-scroll" href="#portfolio" title="Tjenester">Tjenester</a></li>
-        <li><a class="page-scroll" href="#profiles"  title="Referanser">Referanser</a></li>
-        <li><a class="page-scroll" href="#contact"   title="Kontakt">Kontakt</a></li>
 
-        {% comment %} compute language targets {% endcomment %}
+        <!-- About -->
+        <li>
+          {{ '/#about' | relative_url }}
+            Om oss
+          </a>
+        </li>
+
+        <!-- Fleet dropdown -->
+        <li class="dropdown fleet-dropdown">
+          {{ '/#fleet' | relative_url }}
+            Flåten
+            <span class="caret"></span>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li>
+              {{ '/#fleet' | relative_url }}
+                Oversikt over flåten
+              </a>
+            </li>
+
+            <li role="separator" class="divider"></li>
+
+            <li>
+              {{ '/vildanden/' | relative_url }}
+                Vildanden Kystlaboratorium
+                <small>Forskning fra havbunn til fjell</small>
+              </a>
+            </li>
+
+            <li>
+              {{ '/salka-valka/' | relative_url }}
+                Salka Valka
+                <small>Forskning under seil, fra Norge til verden</small>
+              </a>
+            </li>
+          </ul>
+        </li>
+
+        <!-- Services -->
+        <li>
+          {{ '/#portfolio' | relative_url }}
+            Tjenester
+          </a>
+        </li>
+
+        <!-- References -->
+        <li>
+          {{ '/#profiles' | relative_url }}
+            Referanser
+          </a>
+        </li>
+
+        <!-- Contact -->
+        <li>
+          {{ '/#contact' | relative_url }}
+            Kontakt
+          </a>
+        </li>
+
+        {% comment %}
+          Compute language targets.
+          A page-specific English URL can be set with alt_en
+          in the page front matter.
+        {% endcomment %}
+
         {% assign nb_url = page.url | absolute_url %}
+
         {% if page.alt_en %}
           {% assign en_url = page.alt_en %}
         {% else %}
           {% assign en_url = 'https://scienceundersail.org' | append: page.url %}
         {% endif %}
 
-        <!-- Language dropdown (globe) -->
+        <!-- Language dropdown -->
         <li class="dropdown navbar-lang">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
-             aria-haspopup="true" aria-expanded="false" aria-label="Language">
-            <span class="glyphicon glyphicon-globe" aria-hidden="true"></span>
+          #
+            <span
+              class="glyphicon glyphicon-globe"
+              aria-hidden="true"
+            ></span>
             <span class="caret"></span>
           </a>
+
           <ul class="dropdown-menu dropdown-menu-right">
             {% if page.lang == "en" %}
-              <li class="active"><a href="{{ en_url }}">English <span class="lang-check">✓</span></a></li>
+              <li class="active">
+                {{ en_url }}
+                  English
+                  <span class="lang-check">✓</span>
+                </a>
+              </li>
             {% else %}
-              <li><a href="{{ en_url }}">English</a></li>
-            {% endif %}
-            {% if page.lang == "nb" %}
-              <li class="active"><a href="{{ nb_url }}">Norsk <span class="lang-check">✓</span></a></li>
-            {% else %}
-              <li><a href="{{ nb_url }}">Norsk</a></li>
-            {% endif %}
-          </ul>
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
+              <li>
+                {{ en_url }}English</a>
+              </li>
+            {% endif %
