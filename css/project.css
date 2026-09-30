@@ -1,0 +1,86 @@
+.project-header {
+  position: relative;
+  min-height: 55vh;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.38), rgba(0, 0, 0, 0.55)),
+    url("../img/vildanden-hero.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.project-header .header-content {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  padding: 0 20px;
+  transform: translateY(-50%);
+}
+
+.project-header .header-content-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.project-header h1 {
+  margin: 0;
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.project-header p {
+  max-width: 700px;
+  margin: 20px auto 0;
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+
+.project-header hr {
+  max-width: 70px;
+  margin: 25px auto;
+  border-color: #f05f40;
+}
+
+.project-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 70px 25px;
+  font-size: 18px;
+  line-height: 1.75;
+}
+
+.project-content h2 {
+  margin-top: 55px;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+.project-content p {
+  margin-bottom: 22px;
+}
+
+.project-content a {
+  color: #f05f40;
+}
+
+@media (max-width: 768px) {
+  .project-header {
+    min-height: 45vh;
+  }
+
+  .project-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .project-header p {
+    font-size: 1.15rem;
+  }
+
+  .project-content {
+    padding: 50px 20px;
+    font-size: 17px;
+  }
+}
