@@ -1,13 +1,9 @@
 ---
-layout: front
+layout: project
 title: Vildanden Kystlaboratorium
+subtitle: Forskning fra havbunn til fjell
 permalink: /vildanden/
 ---
-
-# Vildanden Kystlaboratorium
-
-## Forskning fra havbunn til fjell
-
 Vildanden er en norskbygd, gaffelrigget Randøy 29, også kjent som Breiflabb, fra Randesund Båtbyggeri. Science under Sail utvikler fartøyet til en seilende feltplattform for økologisk dokumentasjon, folkeforskning, kunnskapsoverføring og levende kystkultur i Vestland.
 
 Fra Vildanden skal vi dokumentere kystnaturen som et sammenhengende landskap, fra naturmangfold under vann og strandsonen til øyer, kystskog, lynghei og fjell. Båten skal gi tilgang til steder som er vanskelige å nå fra land, og gjøre det mulig å kombinere dykking, undervannsfotografering, marin opprydding og terrestrisk feltarbeid.
