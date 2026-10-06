@@ -1,7 +1,7 @@
 ---
 layout: project
 title: Salka Valka
-subtitle: en norsk seilbåt for forskning uten grenser
+subtitle: En norsk seilbåt for forskning uten grenser
 permalink: /salka-valka/
 ---
 
@@ -9,4 +9,4 @@ permalink: /salka-valka/
 
 Denne siden er under utvikling.
 
-{{ '/' | relative_url }}
+[Til/' | relative_url }}
