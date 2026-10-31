@@ -9,4 +9,3 @@ permalink: /salka-valka/
 
 Denne siden er under utvikling.
 
-[Til/' | relative_url }}

@@ -1,0 +1,62 @@
+<section id="bli-medlem" class="bg-light">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 text-center">
+        <h2 class="section-heading">Bli medlem</h2>
+        <hr class="primary">
+        <p class="text-muted">
+          Som medlem kan du delta i medlemsaktiviteter, følge utviklingen av Science under Sail
+          og bidra til å forme organisasjonens videre arbeid. Faglig bakgrunn er ikke nødvendig —
+          nysgjerrighet og vilje til å lære er et godt utgangspunkt.
+        </p>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2">
+
+        <form id="member-form" action="https://form.taxi/s/DIN-FORMKODE" method="POST" accept-charset="UTF-8">
+          <input type="hidden" name="_subject" value="Ny henvendelse fra scienceundersail.no">
+          <input type="hidden" name="_next" value="https://scienceundersail.no/takk/">
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <div class="row">
+            <div class="col-sm-6 form-group">
+              <input type="text" name="navn" class="form-control" placeholder="Navn *" aria-label="Navn" required>
+            </div>
+            <div class="col-sm-6 form-group">
+              <input type="email" name="email" class="form-control" placeholder="E-post *" aria-label="E-post" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-6 form-group">
+              <select name="interesse" class="form-control" aria-label="Interesse">
+                <option value="medlemskap">Jeg vil bli medlem</option>
+                <option value="forsker-for-en-dag">Vær forsker for en dag</option>
+                <option value="dugnad">Dugnad om bord</option>
+                <option value="samarbeid">Forskningssamarbeid / oppdrag</option>
+              </select>
+            </div>
+            <div class="col-sm-6 form-group">
+              <input type="text" name="sted" class="form-control" placeholder="Sted (valgfritt)" aria-label="Sted">
+            </div>
+          </div>
+          <div class="form-group">
+            <textarea name="melding" class="form-control" rows="4" placeholder="Melding (valgfritt)" aria-label="Melding"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="samtykke">
+              <input type="checkbox" name="samtykke" value="ja" required>
+              Jeg samtykker til at opplysningene jeg oppgir behandles for å kunne svare på henvendelsen.
+              <a href="{{ '/personvern/' | relative_url }}">Personvernerklæring</a>
+            </label>
+          </div>
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-xl">Send</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</section>

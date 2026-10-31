@@ -13,7 +13,8 @@ languages:
   - nb
 
 # Contact
-email: info [at] scienceundersail [dot] no
+# Form submissions are handled by form.taxi; no email address is published on the site.
+# Recipients are configured privately in the form.taxi panel.
 
 # Profiles / research presence
 github_username: MarieHoensbroech

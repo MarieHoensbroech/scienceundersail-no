@@ -70,7 +70,37 @@ header .header-content .header-content-inner p {
 }
 
 /* ---------------------------------
-   Fleet: hover overlay cards
+   Membership form (Bli medlem)
+   --------------------------------- */
+#bli-medlem .form-control {
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-shadow: none;
+  height: 44px;
+  margin-bottom: 15px;
+  font-size: 16px;
+}
+
+#bli-medlem textarea.form-control {
+  height: auto;
+}
+
+#bli-medlem .samtykke {
+  display: block;
+  font-weight: 400;
+  font-size: 14px;
+  color: #555;
+  text-align: left;
+  line-height: 1.5;
+}
+
+#bli-medlem .samtykke input {
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+/* ---------------------------------
+
    Applies to the markup in _includes/fleet.html
    --------------------------------- */
 
@@ -134,13 +164,13 @@ header .header-content .header-content-inner p {
 /* ---------------------------------
    Profiles: make Font Awesome + Academicons match the theme color
    --------------------------------- */
-#profiles i.fa,
-#profiles i.ai {
+#forskning i.fa,
+#forskning i.ai {
   color: $theme-primary;
   margin-bottom: 12px;
 }
 
-#profiles h3 {
+#forskning h3 {
   margin-top: 10px;
   margin-bottom: 0;
 }
