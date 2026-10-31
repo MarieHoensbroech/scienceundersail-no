@@ -17,13 +17,13 @@ på henvendelser, ta imot medlemskap og organisere aktiviteter og samarbeid.
 
 Skjemaet brukes til to formål:
 
-- **Medlemskap:** Vi behandler fullt navn, e-postadresse, fødselsdato og adresse
+- **Medlemskap:** Vi behandler fullt navn, e-postadresse og fødselsdato
   for å føre medlemsregisteret og holde kontakten med medlemmene.
 - **Forespørsel om oppdrag:** Vi behandler fullt navn, e-postadresse, hvilken
   tjeneste det gjelder og eventuell melding for å kunne svare på og følge opp
   forespørselen.
 
-For medlemskap er navn, e-postadresse og adresse nødvendig for å føre medlemsregisteret.
+For medlemskap er navn og e-postadresse nødvendig for å føre medlemsregisteret.
 For forespørsler er navn og e-postadresse nødvendig for at vi kan svare deg. Behandlingen av opplysningene du oppgir skjer på
 grunnlag av ditt samtykke (personvernforordningen art. 6 nr. 1 litra a). Du kan
 trekke samtykket tilbake når som helst ved å sende oss en melding via skjemaet.

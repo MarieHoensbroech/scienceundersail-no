@@ -8,10 +8,21 @@
     "use strict"; // Start of use strict
 
     // jQuery for page scrolling feature - requires jQuery Easing plugin
+    // Use this.hash as the selector: hrefs like "/#fleet" (site.baseurl
+    // prefix) are invalid jQuery selectors and would throw. When the
+    // target is not on this page (nav from a subpage), fall through to
+    // normal navigation; the hash-load code below smooth-scrolls on arrival.
     $('a.page-scroll').bind('click', function(event) {
-        var $anchor = $(this);
+        var target = this.hash;
+        if (!target) {
+            return;
+        }
+        var $target = $(target);
+        if (!$target.length) {
+            return;
+        }
         $('html, body').stop().animate({
-            scrollTop: ($($anchor.attr('href')).offset().top - 50)
+            scrollTop: ($target.offset().top - 50)
         }, 1250, 'easeInOutExpo');
         event.preventDefault();
     });
