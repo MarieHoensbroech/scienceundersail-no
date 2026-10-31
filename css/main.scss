@@ -54,7 +54,7 @@ header .header-content .header-content-inner p {
    Portfolio: uniform tile heights (fix uneven image sizes)
    object-fit: cover keeps aspect ratio and crops overflow.
    --------------------------------- */
-#portfolio .portfolio-box img {
+#oppdrag .portfolio-box img {
   width: 100%;
   height: 260px;      /* adjust to taste */
   object-fit: cover;  /* crop to uniform frame without distortion */
@@ -62,11 +62,11 @@ header .header-content .header-content-inner p {
 }
 
 @media (max-width: 991px) {
-  #portfolio .portfolio-box img { height: 220px; }
+  #oppdrag .portfolio-box img { height: 220px; }
 }
 
 @media (max-width: 767px) {
-  #portfolio .portfolio-box img { height: 180px; }
+  #oppdrag .portfolio-box img { height: 180px; }
 }
 
 /* ---------------------------------
