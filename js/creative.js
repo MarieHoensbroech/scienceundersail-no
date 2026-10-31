@@ -16,6 +16,19 @@
         event.preventDefault();
     });
 
+    // Smooth-scroll when the page loads with a #hash (e.g. links from subpages
+    // like /vildanden/ pointing at /#oppdrag) instead of jumping instantly.
+    if (window.location.hash) {
+        var $target = $(window.location.hash);
+        if ($target.length) {
+            $('html, body').hide().animate({
+                scrollTop: ($target.offset().top - 50)
+            }, 1250, 'easeInOutExpo', function () {
+                $('html, body').show();
+            });
+        }
+    }
+
     // Highlight the top nav as scrolling occurs
     $('body').scrollspy({
         target: '.navbar-fixed-top',
