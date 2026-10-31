@@ -8,69 +8,79 @@ lang: nb
 
 Science under Sail tar vare på personvernet ditt. Denne erklæringen forklarer
 hvilke personopplysninger vi samler inn gjennom nettsiden, hvorfor vi gjør det,
-og hvilke rettigheter du har.
+hvor lenge vi lagrer dem, og hvilke rettigheter du har.
 
-## Ansvarlig for behandlingen
+## Hvorfor samler vi inn personopplysninger?
 
-Science under Sail er behandlingsansvarlig for personopplysningene som samles inn
-via nettsiden. Ved spørsmål om personvern kan du sende oss en melding via
-kontaktskjemaet på nettsiden.
+Vi samler inn personopplysninger gjennom kontaktskjemaet på nettsiden, for å svare
+på henvendelser, ta imot medlemskap og organisere aktiviteter og samarbeid.
 
-## Hvilke opplysninger vi samler inn
+Skjemaet brukes til to formål:
 
-Gjennom påmeldingsskjemaet på nettsiden kan du oppgi:
-
-- navn
-- e-postadresse
-- sted (valgfritt)
-- interesseområde og eventuell melding (valgfritt)
+- **Medlemskap:** Vi behandler fullt navn, e-postadresse, fødselsdato og adresse
+  for å føre medlemsregisteret og holde kontakten med medlemmene. Fødselsdato
+  brukes i stedet for fødselsnummer for å begrense mengden sensitive
+  opplysninger.
+- **Forespørsel om oppdrag:** Vi behandler fullt navn, e-postadresse, hvilken
+  tjeneste det gjelder og eventuell melding for å kunne svare på og følge opp
+  forespørselen.
 
 Å oppgi opplysningene er frivillig, men navn og e-postadresse er nødvendig for at
-vi skal kunne svare deg.
-
-## Formål og behandlingsgrunnlag
-
-Opplysningene brukes til å svare på henvendelser, og til å formidle og organisere
-medlemskap, dugnad, folkeforskning og forskningssamarbeid. Behandlingen skjer på
+vi skal kunne svare deg. Behandlingen av opplysningene du oppgir skjer på
 grunnlag av ditt samtykke (personvernforordningen art. 6 nr. 1 litra a). Du kan
-trekke samtykket tilbake når som helst via kontaktskjemaet.
+trekke samtykket tilbake når som helst ved å sende oss en melding via skjemaet.
 
-## Databehandling hos tredjepart
+## Utlevering av personopplysninger til andre (databehandleravtaler)
 
-Skjemaet på nettsiden håndteres av Form.taxi (wrkt*biz, Østerrike), som mottar og
-videresender henvendelsene dine på vår vegne. All behandling skjer på servere i
-EU (Tyskland), og opplysningene overføres ikke til land utenfor EU/EØS. Form.taxi
-er underlagt personvernforordningen og tilbyr databehandleravtale. Vi mottar ikke
-ditt samtykke-sjekkmerke eller andre skjemadata enn det du fyller inn.
+Vi deler ikke personopplysningene dine med andre med mindre det foreligger et
+lovlig grunnlag. Vi bruker følgende databehandlere:
 
-Nettsiden er hostet hos GitHub Pages (GitHub Inc., USA). Nettleseren din laster
-da ned sidene fra GitHubs servere; vi bruker ellers ingen sporingsverktøy eller
-informasjonskapsler for statistikk på nettsiden.
+- **Form.taxi (wrkt*biz, Østerrike):** Mottar og videresender skjemainnsendinger
+  på vår vegne. All behandling skjer på servere i EU (Tyskland), og
+  opplysningene overføres ikke til land utenfor EU/EØS.
+- **GitHub Pages (GitHub Inc., USA):** Hostet av nettsiden. Nettleseren din
+  laster ned sidene fra GitHubs servere; GitHub behandler tekniske data
+  (blant annet IP-adresse) etter egne vilkår.
 
-Vi deler ikke opplysningene dine med andre enn det som er beskrevet over, og vi
-bruker dem ikke til reklame.
+Vi bruker ellers ingen sporingsverktøy eller analyseverktøy på nettsiden.
 
-## Lagring og sletting
+## Lagringstid
 
-Opplysningene lagres så lenge det er nødvendig for å behandle henvendelsen og
-eventuell videre kontakt knyttet til medlemskap eller aktiviteter. Du kan når som
-helst be om innsyn i, retting av eller sletting av opplysningene dine via
-kontaktskjemaet.
+Opplysningene lagres så lenge det er nødvendig for formålet:
 
-## Dine rettigheter
+- Henvendelser om oppdrag lagres så lenge det trengs for å behandle og følge opp
+  forespørselen, og slettes deretter.
+- Medlemsopplysninger lagres så lenge du er medlem. Opplysninger som behandles
+  på grunnlag av samtykke slettes dersom du trekker samtykket tilbake.
 
-Du har etter personvernforordningen rett til innsyn, retting, sletting,
-begrensning av behandlingen, dataportabilitet og å motsette deg behandling. Du kan
-også klage til Datatilsynet (datatilsynet.no) dersom du mener vår behandling av
-personopplysninger bryter med regelverket.
+## Dine rettigheter når vi behandler personopplysninger om deg
 
-## Lenker til eksterne tjenester
+Du har etter personvernforordningen rett til innsyn i hvilke opplysninger vi
+behandler om deg, retting av feilaktige opplysninger, sletting, begrensning av
+behandlingen, dataportabilitet og å motsette deg behandling. Vi svarer deg så
+snart som mulig, og innen 30 dager. For å ivareta personvernet ditt kan vi be deg
+bekrefte identiteten din før vi gir innsyn eller retter opplysninger.
 
-Nettsiden lenker til eksterne tjenester som iNaturalist, ResearchGate, ORCID og
-GitHub. Disse tjenestene behandler opplysningene sine etter egne
-personvernerklæringer, som vi henviser til.
+## Klager
+
+Du kan klage til Datatilsynet (www.datatilsynet.no) dersom du mener vår
+behandling av personopplysninger bryter med regelverket.
 
 ## Endringer
 
-Erklæringen kan bli oppdatert når vi endrer hvordan vi behandler personopplysninger.
-Sist oppdatert: oktober 2026.
+Dersom vi endrer tjenestene våre eller regelverket endres, kan denne
+erklæringen bli oppdatert. Sist oppdatert: oktober 2026.
+
+## Cookies (informasjonskapsler)
+
+Nettsiden bruker ingen informasjonskapsler til statistikk, markedsføring eller
+innlogging. Skjemaet håndteres av Form.taxi; innsendingen skjer direkte til
+Form.taxi sitt endepunkt, og Eventuell informasjonskapselbruk knyttet til
+innsendingen reguleres av Form.taxi sin personvernerklæring
+(form.taxi/en/privacy).
+
+## Kontaktinformasjon
+
+Science under Sail er behandlingsansvarlig for opplysningene som samles inn via
+nettsiden. Ved spørsmål om personvern, innsyn eller sletting kan du sende oss en
+melding via kontaktskjemaet på nettsiden.
