@@ -1,20 +1,114 @@
-<section id="contact">
+<section id="contact" class="bg-light">
   <div class="container">
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 text-center">
-        <h2 class="section-heading">Ønsker du å samarbeide, støtte forskningen vår eller høre mer om medlemskap?</h2>
+        <h2 class="section-heading">Kontakt</h2>
         <hr class="primary">
-        <p>Send oss en melding via skjemaet over, så hører du fra oss så snart som mulig.</p>
+        <p class="text-muted">
+          Ønsker du å samarbeide, støtte forskningen vår eller bli medlem?
+          Send oss en melding, så hører du fra oss så snart som mulig.
+        </p>
       </div>
     </div>
 
     <div class="row">
       <div class="col-xs-12 text-center">
-        <a href="{{ '/#bli-medlem' | relative_url }}">
+        <a href="#kontaktskjema" class="page-scroll">
           <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s" aria-hidden="true"></i>
           <p>Gå til kontaktskjemaet</p>
         </a>
       </div>
     </div>
+
+    <div class="row" id="kontaktskjema" style="margin-top: 40px;">
+      <div class="col-lg-8 col-lg-offset-2">
+
+        <form id="member-form" action="https://form.taxi/s/ghkelxkw" method="POST" accept-charset="UTF-8">
+          <input type="hidden" name="_subject" value="Ny henvendelse fra scienceundersail.no">
+          <input type="hidden" name="_next" value="https://scienceundersail.no/takk/">
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+          <div class="form-group">
+            <select name="henvendelse" class="form-control" aria-label="Type henvendelse" id="form-type">
+              <option value="medlemskap" selected>Jeg vil bli medlem</option>
+              <option value="oppdrag">Jeg vil booke dere / forespørre om oppdrag</option>
+            </select>
+          </div>
+
+          <!-- Felles felt -->
+          <div class="row">
+            <div class="col-sm-6 form-group">
+              <input type="text" name="navn" class="form-control" placeholder="Fullt navn *" aria-label="Fullt navn" required>
+            </div>
+            <div class="col-sm-6 form-group">
+              <input type="email" name="email" class="form-control" placeholder="E-post *" aria-label="E-post" required>
+            </div>
+          </div>
+
+          <!-- Medlemskap: fødselsdato og adresse -->
+          <div id="medlem-fields" style="display: block;">
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <input type="date" name="fodselsdato" class="form-control" aria-label="Fødselsdato">
+              </div>
+              <div class="col-sm-6 form-group">
+                <input type="text" name="adresse" class="form-control" placeholder="Adresse *" aria-label="Adresse" required>
+              </div>
+            </div>
+          </div>
+
+          <!-- Oppdrag: hvilken tjeneste -->
+          <div id="oppdrag-fields" style="display: none;">
+            <div class="form-group">
+              <select name="tjeneste" class="form-control" aria-label="Hva gjelder det?">
+                <option value="feltarbeid">Feltarbeid / tilgang til feltsteder</option>
+                <option value="dataanalyse">Datainnsamling og analyse</option>
+                <option value="formidling">Skriving og publisering</option>
+                <option value="nettsider">Nettsider og apper</option>
+                <option value="annet">Annet</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <textarea name="melding" class="form-control" rows="4" placeholder="Melding (valgfritt)" aria-label="Melding"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="samtykke">
+              <input type="checkbox" name="samtykke" value="ja" required>
+              Jeg samtykker til at opplysningene jeg oppgir behandles for å kunne svare på henvendelsen.
+              <a href="{{ '/personvern/' | relative_url }}">Personvernerklæring</a>
+            </label>
+          </div>
+
+          <div class="text-center">
+            <button type="submit" class="btn btn-primary btn-xl">Send</button>
+          </div>
+        </form>
+
+      </div>
+    </div>
   </div>
 </section>
+
+<script>
+  (function () {
+    var type = document.getElementById('form-type');
+    var memberFields = document.getElementById('medlem-fields');
+    var bookingFields = document.getElementById('oppdrag-fields');
+
+    function update() {
+      var isMember = type.value === 'medlemskap';
+      memberFields.style.display = isMember ? 'block' : 'none';
+      bookingFields.style.display = isMember ? 'none' : 'block';
+      // Only require the fields that are visible
+      memberFields.querySelectorAll('[required]').forEach(function (el) {
+        el.required = isMember;
+      });
+    }
+
+    type.addEventListener('change', update);
+    update();
+  })();
+</script>

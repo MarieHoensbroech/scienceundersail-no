@@ -72,7 +72,7 @@ header .header-content .header-content-inner p {
 /* ---------------------------------
    Membership form (Bli medlem)
    --------------------------------- */
-#bli-medlem .form-control {
+#kontaktskjema .form-control {
   border-radius: 4px;
   border: 1px solid #ccc;
   box-shadow: none;
@@ -81,11 +81,11 @@ header .header-content .header-content-inner p {
   font-size: 16px;
 }
 
-#bli-medlem textarea.form-control {
+#kontaktskjema textarea.form-control {
   height: auto;
 }
 
-#bli-medlem .samtykke {
+#kontaktskjema .samtykke {
   display: block;
   font-weight: 400;
   font-size: 14px;
@@ -94,7 +94,7 @@ header .header-content .header-content-inner p {
   line-height: 1.5;
 }
 
-#bli-medlem .samtykke input {
+#kontaktskjema .samtykke input {
   margin-right: 8px;
   vertical-align: middle;
 }
