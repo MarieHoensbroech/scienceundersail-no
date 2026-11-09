@@ -110,6 +110,14 @@
   margin: 35px auto;
 }
 
+.project-content iframe {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  margin: 35px auto;
+  border: 0;
+}
+
 .project-content blockquote {
   margin: 35px 0;
   padding: 15px 25px;

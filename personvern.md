@@ -39,6 +39,10 @@ lovlig grunnlag. Vi bruker følgende databehandlere:
 - **GitHub Pages (GitHub Inc., USA):** Hostet av nettsiden. Nettleseren din
   laster ned sidene fra GitHubs servere; GitHub behandler tekniske data
   (blant annet IP-adresse) etter egne vilkår.
+- **Posit Connect Cloud (Posit Public Company, USA):** Hoster
+  kartapplikasjonen på salka-valka-siden. Nettleseren din laster kartet fra
+  Posits servere; Posit behandler tekniske data (blant annet IP-adresse)
+  etter egne vilkår.
 
 Vi bruker ellers ingen sporingsverktøy eller analyseverktøy på nettsiden.
 
@@ -67,7 +71,7 @@ behandling av personopplysninger bryter med regelverket.
 ## Endringer
 
 Dersom vi endrer tjenestene våre eller regelverket endres, kan denne
-erklæringen bli oppdatert. Sist oppdatert: oktober 2026.
+erklæringen bli oppdatert. Sist oppdatert: november 2026.
 
 ## Cookies (informasjonskapsler)
 
