@@ -1,11 +1,47 @@
 # Science under Sail — nettside (scienceundersail.no)
 
-## Project state (updated 2026-11-09, after footer/nav/medlemskap rework)
+## Project state (updated 2026-11-09, after GSC/SEO rework, commit 30333f6)
 
 Jekyll site on GitHub Pages (custom domain, HTTPS enforced). Repo:
 `C:\Users\Marie\Documents\ScienceUnderSail\github\scienceundersail-no`
 Branch `master`, deployed by GitHub Pages on push. No Ruby/Jekyll locally —
 all verification via git history + post-push visual checks by user.
+
+## SEO / Search Console (2026-11-09, commit 30333f6 — user approved commit+push)
+
+- GSC reported "Page with redirect" + "Crawled - currently not indexed".
+  Root causes fixed: (1) head.html canonical was HARDCODED to homepage on
+  every page -> Google dropped all subpages as duplicates; (2) sitemap listed
+  only homepage with stale 2026-02-23 lastmod; (3) every page had identical
+  title "Science under Sail"
+- Now: canonical per page via `site.url + page.url`; titles
+  `{{ page.title }} | Science under Sail` (homepage stays bare, title==blank
+  guard for layoutless pages); hreflang trio ONLY on homepage
+  (scienceundersail.org is a real live English one-pager (lang=en) that
+  reciprocates hreflang - intentional, do not remove; it 404s on all
+  subpages); OG/Twitter tags added
+- sitemap.xml (HAND-MAINTAINED, no Jekyll plugin): 9 indexable URLs
+  (/, vildanden, salka-valka, medlemskap, medlemskap/forsker-for-en-dag,
+  medlemskap/rydding-og-bekjempelse, ekspedisjoner,
+  ekspedisjoner/accidental-epiphytes, personvern) with current lastmod.
+  NOT listed: /takk/ (form success page), /404.html. Update lastmod when
+  pages change meaningfully
+- Per-page meta descriptions in front matter `description:` of the 8 content
+  pages; head.html falls back to site.description. Trailing-slash-less URLs
+  (e.g. /medlemskap) 301 -> slashed (GitHub Pages, normal); www/http 301 ->
+  https apex (normal, not errors)
+- GA4 (GTM-KTRBC4SF, contains G-D38VB20PKB): user chose KEEP + consent banner.
+  Consent-gated loader in head.html (no gtm.js before consent; localStorage
+  key `sus-cookie-consent`, values granted/denied; banner injected by JS,
+  styled inline in head.html <style>); "Kakeinnstillinger" link in
+  credits.html footer re-opens banner (clears choice)
+- personvern.md: Google (Google Ireland/LLC, USA) now listed as databehandler
+  for GA4 (consent-gated); Cookies section rewritten (accurate, _ga ~2 years);
+  "ingen andre sporingsverktøy" phrasing
+- JSON-LD in head.html: logo -> logo.png (was .ico), inLanguage nb (was "no")
+- Academicons CDN bumped to pinned @1.9.4 (was floating @1)
+- Merriweather 300/800 etc. IS used (body text via _sass/_mixins.scss
+  serif-font) - do not trim Google Fonts weight lists as "optimization"
 
 ## Site structure
 
