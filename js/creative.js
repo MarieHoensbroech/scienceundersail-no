@@ -61,28 +61,6 @@
         $('.navbar-toggle:visible').click();
     });
 
-    // Touch: on some browsers (this site: Brave/Android on the homepage) the
-    // synthesized click that Bootstrap's dropdown data-api needs never fires,
-    // so tapping a dropdown parent did nothing. Toggle directly on touchend.
-    // Guard: finger movement > 10px means a scroll, not a tap. preventDefault
-    // suppresses the ghost click (and the href navigation) so the dropdown
-    // cannot toggle twice or be race-closed by a document click.
-    var susTouchStart = null;
-    $(document).on('touchstart', '[data-toggle="dropdown"]', function (e) {
-        var t = e.originalEvent.touches && e.originalEvent.touches[0];
-        susTouchStart = t ? { x: t.clientX, y: t.clientY } : null;
-    });
-    $(document).on('touchend', '[data-toggle="dropdown"]', function (e) {
-        var t = e.originalEvent.changedTouches && e.originalEvent.changedTouches[0];
-        var start = susTouchStart;
-        susTouchStart = null;
-        if (!start || !t) { return; }
-        var dx = t.clientX - start.x, dy = t.clientY - start.y;
-        if (dx * dx + dy * dy > 100) { return; }
-        e.preventDefault();
-        $(this).dropdown('toggle');
-    });
-
     // Fit Text Plugin for Main Header
     $("h1").fitText(
         1.2, {

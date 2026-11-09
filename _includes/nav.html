@@ -239,3 +239,57 @@
     </div>
   </div>
 </nav>
+<script>
+(function () {
+  var until = 0;
+  function now() { return Date.now(); }
+  function menuOf(toggle) {
+    var li = toggle.closest("li");
+    return li ? li.querySelector(".dropdown-menu") : null;
+  }
+  function isOpen(toggle) {
+    var li = toggle.closest("li");
+    return li && li.className.indexOf("open") !== -1;
+  }
+  function closeAll(except) {
+    document.querySelectorAll("li.open [data-toggle=dropdown]").forEach(function (t) {
+      if (t !== except) { t.parentElement.classList.remove("open"); t.setAttribute("aria-expanded", "false"); }
+    });
+  }
+  var startXY = null;
+  document.addEventListener("touchstart", function (e) {
+    var t = e.target.closest ? e.target.closest("[data-toggle=dropdown]") : null;
+    if (t && e.touches && e.touches[0]) { startXY = { x: e.touches[0].clientX, y: e.touches[0].clientY }; }
+  }, { passive: true });
+  document.addEventListener("touchend", function (e) {
+    var t = e.target.closest ? e.target.closest("[data-toggle=dropdown]") : null;
+    if (!t || !startXY) { return; }
+    var te = e.changedTouches && e.changedTouches[0];
+    if (!te) { return; }
+    var dx = te.clientX - startXY.x, dy = te.clientY - startXY.y;
+    startXY = null;
+    if (dx * dx + dy * dy > 100) { return; }
+    until = now() + 600;
+    e.preventDefault();
+    var opening = !isOpen(t);
+    closeAll(t);
+    if (opening) { t.parentElement.classList.add("open"); t.setAttribute("aria-expanded", "true"); }
+    else { t.setAttribute("aria-expanded", "false"); }
+    var m = menuOf(t);
+    var ok = m && m.getBoundingClientRect().height > 0;
+    var badge = document.getElementById("nv3badge");
+    if (badge) {
+      if (!ok) { badge.hidden = false; badge.textContent = "nv3: dropdown Aapner IKKE - display: " + (m ? getComputedStyle(m).display : "ingen") + ", maxh: " + (m ? getComputedStyle(m).maxHeight : "?"); }
+      else { badge.hidden = true; }
+    }
+  }, { passive: false });
+  document.addEventListener("click", function (e) {
+    if (now() < until) { e.preventDefault(); e.stopPropagation(); return; }
+  }, { capture: true });
+  document.addEventListener("touchstart", function (e) {
+    var t = e.target.closest ? e.target.closest("[data-toggle=dropdown]") : null;
+    if (!t) { closeAll(null); }
+  }, { passive: true });
+})();
+</script>
+<div id="nv3badge" hidden style="position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#a00;color:#fff;font:12px monospace;padding:6px;text-align:center;"></div>
