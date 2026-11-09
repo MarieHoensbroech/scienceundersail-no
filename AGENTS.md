@@ -216,6 +216,18 @@ all verification via git history + post-push visual checks by user.
   .navbar-fixed-top .navbar-collapse (BS3 340px no-scroll clip hid opened
   dropdown items; now 70vh + overflow-y auto). Debug artifacts removed
   (debug-tap include, navtest.html)
+- Mobile dropdown FINAL state (6f61f09 + 9aa8c9d + 28fc93c): touch handling
+  is INLINE IN nav.html after </nav> (external creative.js handler never
+  reached user's Brave - script/HTML cache mismatch suspected). Inline
+  script: touchend opens/closes dropdowns directly (10px guard, class-based
+  open state, aria-expanded); outside-tap close ONLY when tap is outside
+  .navbar-nav (bug 9aa8c9d: closing on item taps killed navigation);
+  ghost-click suppressor only for clicks on the toggle (not items);
+  nav fallback (28fc93c): if a tap on a .dropdown-menu a produces no click
+  within 400ms, navigate via location.href (10px guard, click cancels).
+  nv3badge div: red diagnostic bar if dropdown opens with zero height
+  (keep until user confirms all works, then may remove). User CONFIRMED:
+  dropdowns now OPEN (6f61f09); item-tap navigation pending user test
 - CACHE CONVENTION: local scripts + project.css load with ?v=YYYYMMDD;
   BUMP the string on every JS/CSS fix (Fastly max-age=600, browser cache
   otherwise serves old assets; 20261109 -> 20261110 at 16f398d)
