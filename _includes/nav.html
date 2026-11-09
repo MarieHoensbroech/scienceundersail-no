@@ -52,6 +52,15 @@
   .om-dropdown .dropdown-menu > li > a:focus small {
     color: inherit;
   }
+  /* Bootstrap clips .navbar-fixed-top .navbar-collapse to 340px (no
+     scrolling), so an opened dropdown's items were rendered but invisible
+     below the boundary on mobile. Let the open menu grow and scroll. */
+  @media (max-width: 767px) {
+    .navbar-fixed-top .navbar-collapse {
+      max-height: 70vh;
+      overflow-y: auto;
+    }
+  }
 </style>
 
 <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
