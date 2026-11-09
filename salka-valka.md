@@ -23,5 +23,7 @@ Spanskens nordvestkyst — utgangspunktet for neste etappe.
   width="100%" height="360" loading="lazy">
 </iframe>
 
+## Tidligere ekspedisjoner
+
 Salka Valka har allerede båret oss gjennom en ekspedisjon som ble en
 publisert studie — les mer under [Tidligere ekspedisjoner]({{ site.baseurl }}/ekspedisjoner/).

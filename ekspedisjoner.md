@@ -40,7 +40,7 @@ Den andre veien er folkeforskning: alle kan være forsker. Forskere trenger
 nesten ikke å reise lenger — systematisk feltarbeid er fortsatt
 nødvendig, men reiseveiene kan kuttes kraftig, fordi folkeforskere som
 deg allerede er ute i landskapene. Del observasjonene dine på
-[iNaturalist]({{ site.inaturalist_url }}), så blir de en del av felles
+[iNaturalist](https://www.inaturalist.org), så blir de en del av felles
 kunnskap.
 
 ### Utforsk observasjonene
