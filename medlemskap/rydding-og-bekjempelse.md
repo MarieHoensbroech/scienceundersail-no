@@ -22,7 +22,9 @@ tilstanden i kystsonen — ikke bare en ryddigere strand.
 
 ## Bli med
 
-Medlemskapet er gratis. Registrer interesse i kontaktskjemaet på forsiden, så
-gir vi beskjed når de første dugnadene åpnes.
+Medlemskapet er gratis. Registrer interesse i kontaktskjemaet under, så gir vi
+beskjed når de første dugnadene åpnes.
 
-<a class="btn btn-primary" href="{{ site.baseurl }}/#kontaktskjema">Registrer interesse</a>
+<div class="text-center">
+  <a class="btn btn-primary page-scroll" href="#kontaktskjema">Registrer interesse</a>
+</div>

@@ -22,6 +22,7 @@
           <div class="form-group">
             <select name="henvendelse" class="form-control" aria-label="Type henvendelse" id="form-type">
               <option value="medlemskap" selected>Jeg vil bli medlem</option>
+              <option value="stottemedlem">Jeg vil bli støttemedlem</option>
               <option value="oppdrag">Jeg vil booke dere / forespørre om oppdrag</option>
             </select>
           </div>
@@ -40,7 +41,16 @@
           <div id="medlem-fields" style="display: block;">
             <div class="row">
               <div class="col-sm-6 form-group">
-                <input type="date" name="fodselsdato" class="form-control" aria-label="Fødselsdato">
+                <input type="date" name="fodselsdato" class="form-control" aria-label="Fødselsdato" data-required>
+              </div>
+            </div>
+          </div>
+
+          <!-- Støttemedlem: valgfritt beløp -->
+          <div id="stotte-fields" style="display: none;">
+            <div class="row">
+              <div class="col-sm-6 form-group">
+                <input type="number" name="belop" class="form-control" placeholder="Velg selv beløp (kr per år) *" aria-label="Beløp per år i kroner" min="1" data-required>
               </div>
             </div>
           </div>
@@ -83,16 +93,22 @@
 <script>
   (function () {
     var type = document.getElementById('form-type');
-    var memberFields = document.getElementById('medlem-fields');
-    var bookingFields = document.getElementById('oppdrag-fields');
+    var blocks = {
+      medlemskap: document.getElementById('medlem-fields'),
+      stottemedlem: document.getElementById('stotte-fields'),
+      oppdrag: document.getElementById('oppdrag-fields')
+    };
 
     function update() {
-      var isMember = type.value === 'medlemskap';
-      memberFields.style.display = isMember ? 'block' : 'none';
-      bookingFields.style.display = isMember ? 'none' : 'block';
-      // Only require the fields that are visible
-      memberFields.querySelectorAll('[required]').forEach(function (el) {
-        el.required = isMember;
+      var mode = type.value;
+      Object.keys(blocks).forEach(function (key) {
+        var active = key === mode;
+        blocks[key].style.display = active ? 'block' : 'none';
+        // Hidden blocks are neither required nor submitted
+        blocks[key].querySelectorAll('input, select').forEach(function (el) {
+          el.disabled = !active;
+          if (el.hasAttribute('data-required')) { el.required = active; }
+        });
       });
     }
 

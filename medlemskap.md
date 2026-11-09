@@ -23,8 +23,10 @@ Medlemskapet er gratis. Det gir deg:
 ## Støttemedlem
 
 Vil du støtte det vi gjør uten å være med i felten, kan du bli støttemedlem
-for 500 kr per året. Kontingenten går til vedlikehold av båten, feltutstyr og
-de neste ekspedisjonene — og faktura sendes etter påmelding.
+for et valgfritt beløp per år. Vi foreslår 500 kr, men du velger selv beløpet.
+Kontingenten går til vedlikehold av båten, feltutstyr og de neste
+ekspedisjonene — og faktura sendes etter påmelding. Du velger «Jeg vil bli
+støttemedlem» i kontaktskjemaet og oppgir beløpet der selv.
 
 ## Underaktivitetene
 
@@ -35,7 +37,8 @@ Medlemskapet er rammen om det vi gjør om bord og på land:
 
 ## Bli medlem
 
-Registrer deg i kontaktskjemaet på forsiden, så hører du fra oss så snart som
-mulig.
+Registrer deg i kontaktskjemaet under, så hører du fra oss så snart som mulig.
 
-<a class="btn btn-primary" href="{{ site.baseurl }}/#kontaktskjema">Bli medlem</a>
+<div class="text-center">
+  <a class="btn btn-primary page-scroll" href="#kontaktskjema">Bli medlem</a>
+</div>

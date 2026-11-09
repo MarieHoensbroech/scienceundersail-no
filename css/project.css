@@ -192,3 +192,8 @@
     min-width: 100%;
   }
 }
+
+/* Contact form CTA: white text on the theme-orange button */
+#kontaktskjema .btn-primary {
+  color: #ffffff;
+}

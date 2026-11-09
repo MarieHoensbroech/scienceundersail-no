@@ -29,14 +29,21 @@
 
     // Smooth-scroll when the page loads with a #hash (e.g. links from subpages
     // like /vildanden/ pointing at /#oppdrag) instead of jumping instantly.
+    // The target is measured BEFORE hiding the body: a hidden element reports
+    // offset().top = 0, which scrolled every arrival to the top of the page.
+    // The scroll is re-run once images have loaded, since they change the
+    // layout height and would otherwise leave the target offset.
     if (window.location.hash) {
         var $target = $(window.location.hash);
         if ($target.length) {
-            $('html, body').hide().animate({
-                scrollTop: ($target.offset().top - 50)
-            }, 1250, 'easeInOutExpo', function () {
-                $('html, body').show();
-            });
+            var scrollToTarget = function () {
+                $('html, body').stop().animate({
+                    scrollTop: ($target.offset().top - 50)
+                }, 1250, 'easeInOutExpo');
+            };
+            scrollToTarget();
+            $('img').one('load', scrollToTarget);
+            $(window).one('load', scrollToTarget);
         }
     }
 

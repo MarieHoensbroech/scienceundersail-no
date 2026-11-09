@@ -31,7 +31,9 @@ reiseveiene og gir data fra steder forskningen sjelden når. Les mer om
 
 ## Bli med
 
-Medlemskapet er gratis. Registrer interesse i kontaktskjemaet på forsiden, så
-gir vi beskjed når de første turene åpnes.
+Medlemskapet er gratis. Registrer interesse i kontaktskjemaet under, så gir vi
+beskjed når de første turene åpnes.
 
-<a class="btn btn-primary" href="{{ site.baseurl }}/#kontaktskjema">Registrer interesse</a>
+<div class="text-center">
+  <a class="btn btn-primary page-scroll" href="#kontaktskjema">Registrer interesse</a>
+</div>
