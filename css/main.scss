@@ -159,6 +159,44 @@ header .header-content .header-content-inner p {
 
 @media (max-width: 767px) {
   .fleet-box img { height: 260px; }
+
+.expedition-link {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 18px 40px;
+  border: 2px solid #f05f40;
+  border-radius: 4px;
+  color: #f05f40;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.expedition-link:hover,
+.expedition-link:focus {
+  border-color: #d94c30;
+  color: #d94c30;
+  text-decoration: none;
+  background: rgba(240, 95, 64, 0.06);
+}
+
+.expedition-link .fa-map-o {
+  font-size: 34px;
+  margin-right: 14px;
+  vertical-align: middle;
+}
+
+.expedition-link span {
+  font-size: 22px;
+  font-weight: 600;
+  vertical-align: middle;
+}
+
+.expedition-link small {
+  display: block;
+  margin-top: 4px;
+  font-size: 14px;
+  color: #777777;
+}
 }
 
 /* ---------------------------------

@@ -4,7 +4,7 @@ title: Tidligere ekspedisjoner
 subtitle: Vår motivasjon
 permalink: /ekspedisjoner/
 lang: nb
-header_image: fleet/SV.jpg
+header_image: fleet/exp.jpeg
 ---
 
 # Tidligere ekspedisjoner
