@@ -53,8 +53,11 @@
         offset: 51
     })
 
-    // Closes the Responsive Menu on Menu Item Click
-    $('.navbar-collapse ul li a').click(function() {
+    // Closes the Responsive Menu on Menu Item Click.
+    // dropdown-toggle is EXCLUDED: on mobile, tapping a dropdown parent
+    // (Flåten/Om oss/etc.) collapsed the whole menu before the dropdown
+    // could open. Dropdown items (li a without .dropdown-toggle) still close it.
+    $('.navbar-collapse ul li a').not('.dropdown-toggle').click(function() {
         $('.navbar-toggle:visible').click();
     });
 
