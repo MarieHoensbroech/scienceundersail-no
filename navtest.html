@@ -1,0 +1,74 @@
+---
+layout: null
+permalink: /navtest/
+---
+
+<!DOCTYPE html>
+<html lang="nb">
+
+{% include head.html %}
+
+<body id="page-top">
+
+  {% include nav.html %}
+
+  <div style="padding: 120px 20px 40px; max-width: 700px; margin: 0 auto; font-family: sans-serif;">
+    <h2>Meny-diagnostikk</h2>
+    <p>Denne siden bruker nøyaktig samme meny, skript og CSS som resten av nettstedet.
+       Resultatet av en automatisk test vises i den grønne ruten nederst.</p>
+  </div>
+
+  {% include scripts.html %}
+
+  <div id="navdbg" style="position: fixed; bottom: 0; left: 0; right: 0; z-index: 99999; background: #000; color: #0f0; font: 12px/1.5 monospace; padding: 10px; white-space: pre-wrap;"></div>
+
+  <script>
+    (function () {
+      var box = document.getElementById('navdbg');
+      function out(s) { box.textContent += s + "\n"; }
+      out('DIAGNOSTIKK START');
+      out('viewport: ' + window.innerWidth + 'x' + window.innerHeight);
+
+      window.onerror = function (msg, src, line) {
+        out('JS FEIL: ' + msg + ' (linje ' + line + ')');
+      };
+
+      window.addEventListener('load', function () {
+        try {
+          out('jQuery: ' + (window.jQuery ? jQuery.fn.jquery : 'MANGLER!'));
+          out('$.fn.dropdown: ' + (window.jQuery && jQuery.fn.dropdown ? 'OK' : 'MANGLER!'));
+          out('$.fn.collapse: ' + (window.jQuery && jQuery.fn.collapse ? 'OK' : 'MANGLER!'));
+
+          var toggles = document.querySelectorAll('[data-toggle="dropdown"]');
+          out('antall dropdown-toggles: ' + toggles.length);
+
+          if (!toggles.length || !window.jQuery) { out('DIAG SLUTT'); return; }
+
+          var li = toggles[0].closest('li');
+          out('før klikk: li-klasse = "' + li.className + '"');
+
+          toggles[0].click();
+
+          setTimeout(function () {
+            var li2 = toggles[0].closest('li');
+            var menu = li2.querySelector('.dropdown-menu');
+            var vis = menu ? getComputedStyle(menu).display : 'ukjent';
+            out('etter klikk: li-klasse = "' + li2.className + '"');
+            out('meny display: ' + vis);
+            if (li2.className.indexOf('open') !== -1 && vis !== 'none') {
+              out('RESULTAT: dropdown VIRMERKER på denne siden (JS og markup OK).');
+              out('Da er problemet enhets-/nettleserspesifikt: test med Shields av.');
+            } else {
+              out('RESULTAT: dropdown ÅPNER IKKE - JS/JS-plugin-feil på denne siden.');
+            }
+            out('DIAG SLUTT');
+          }, 400);
+        } catch (e) {
+          out('DIAG-FEIL: ' + e.message);
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
