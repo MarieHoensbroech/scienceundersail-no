@@ -4,6 +4,7 @@ title: Vildanden Kystlaboratorium
 subtitle: Forskning fra havbunn til fjell
 permalink: /vildanden/
 lang: nb
+header_image: fleet/VA_landscape.jpg
 ---
 
 # Vildanden Kystlaboratorium
@@ -13,6 +14,15 @@ lang: nb
 Vildanden er en norskbygd, gaffelrigget Randøy 29, også kjent som Breiflabb, fra Randesund Båtbyggeri. Science under Sail utvikler fartøyet til en seilende feltplattform for økologisk dokumentasjon, folkeforskning, kunnskapsoverføring og levende kystkultur i Vestland.
 
 Fra Vildanden skal vi undersøke kystnaturen som et sammenhengende landskap, fra naturmangfoldet under vann og livet i strandsonen til øyer, kystskog, lynghei og fjell. Båten skal gi tilgang til steder som er vanskelig tilgjengelige fra land, og gjøre det mulig å kombinere dykking, undervannsfotografering, marin opprydding og terrestrisk feltarbeid.
+
+## Der hun ligger nå
+
+Vildanden ligger i dag i Strusshamn Kystlag på Askøy, ved innseilingen til Bergen.
+
+<iframe src="https://www.openstreetmap.org/export/embed.html?bbox=5.1723055%2C60.3845289%2C5.2123055%2C60.4245289&layer=mapnik&marker=60.4045289%2C5.1923055"
+  title="Kart: Vildanden ligger i Strusshamn Kystlag, Askøy"
+  width="100%" height="360" loading="lazy">
+</iframe>
 
 Utvalgte lokaliteter skal besøkes gjennom flere feltsesonger. Fotografier, artsregistreringer og miljøobservasjoner skal samles i et strukturert digitalt arkiv og kunne sammenlignes mellom lokaliteter og over tid.
 
