@@ -198,14 +198,10 @@
         <li><a class="page-scroll" href="{{ site.baseurl }}/#oppdrag">Oppdrag</a></li>
         <li><a class="page-scroll" href="{{ site.baseurl }}/#contact">Kontakt</a></li>
 
-        {%- comment -%} Compute language targets {%- endcomment -%}
+        {%- comment -%} Language targets: .org is a homepage-only English one-pager,
+             so English always points at the .org homepage (never 404s). {%- endcomment -%}
         {%- assign nb_url = page.url | absolute_url -%}
-
-        {%- if page.alt_en -%}
-          {%- assign en_url = page.alt_en -%}
-        {%- else -%}
-          {%- assign en_url = 'https://scienceundersail.org' | append: page.url -%}
-        {%- endif -%}
+        {%- assign en_url = page.alt_en | default: 'https://scienceundersail.org/' -%}
 
         <!-- Language dropdown (globe icon) -->
         <li class="dropdown navbar-lang">
