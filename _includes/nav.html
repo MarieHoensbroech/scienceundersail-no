@@ -283,12 +283,19 @@
       else { badge.hidden = true; }
     }
   }, { passive: false });
+  // Ghost-click suppressor: after a touch-open, swallow only clicks that
+  // land on the toggle itself - real clicks on menu items must pass through.
   document.addEventListener("click", function (e) {
-    if (now() < until) { e.preventDefault(); e.stopPropagation(); return; }
+    if (now() < until && e.target.closest && e.target.closest("[data-toggle=dropdown]")) {
+      e.preventDefault(); e.stopPropagation();
+    }
   }, { capture: true });
+  // Outside-tap close: close only when the tap is outside the nav menu
+  // entirely - taps on dropdown items must NOT close the menu before the
+  // link click fires (that was the "menu closes when I tap a page" bug).
   document.addEventListener("touchstart", function (e) {
-    var t = e.target.closest ? e.target.closest("[data-toggle=dropdown]") : null;
-    if (!t) { closeAll(null); }
+    var inMenu = e.target.closest ? e.target.closest(".navbar-nav") : null;
+    if (!inMenu) { closeAll(null); }
   }, { passive: true });
 })();
 </script>
