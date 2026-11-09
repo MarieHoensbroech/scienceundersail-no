@@ -64,7 +64,8 @@ all verification via git history + post-push visual checks by user.
   SECTION heading in forskning.html still reads "Forskning og ekspedisjoner"
 - Scroll story: about "Bli med om bord" → #fleet; fleet "Slik kan du være
   med" → #medlemskap; medlemskap "Finn ut hva vi gjør" → #forskning;
-  forskning: icon tile → /ekspedisjoner/ + "Slik finansierer vi
+  forskning: icon tile → /ekspedisjoner/accidental-epiphytes/ (fixed
+  3e5a382 - was /ekspedisjoner/ = Var motivasjon) + "Slik finansierer vi
   aktivitetene våre" → #oppdrag; oppdrag ends with envelope icon "Ta
   kontakt" → #kontaktskjema (replaced old "Ta kontakt" button per user).
   All `page-scroll` (1250ms). Order/wording intentional, do not "fix"
