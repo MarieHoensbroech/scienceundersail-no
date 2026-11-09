@@ -5,6 +5,7 @@ description: "Rydding og bekjempelse: strandrydding, kystskogrydding og bekjempe
 subtitle: Strandrydding, kystskog og invaderende arter
 permalink: /medlemskap/rydding-og-bekjempelse/
 lang: nb
+header_image: fleet/rydding.jpg
 ---
 
 Marin søppel, søppel i kystskogen og invaderende arter krever mange hender.

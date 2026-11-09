@@ -5,6 +5,7 @@ description: "Forsker for en dag: bli med om bord på en ekte feltforskerdag og 
 subtitle: Dags- og helgeturer med deltakende feltarbeid
 permalink: /medlemskap/forsker-for-en-dag/
 lang: nb
+header_image: fleet/bliforsker.jpg
 ---
 
 Som medlem kan du bli med om bord på Vildanden som forsker for en dag.

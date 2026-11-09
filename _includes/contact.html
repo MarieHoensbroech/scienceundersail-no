@@ -46,9 +46,12 @@
             </div>
           </div>
 
-          <!-- Støttemedlem: valgfritt beløp -->
+          <!-- Støttemedlem: fødselsdato + valgfritt beløp -->
           <div id="stotte-fields" style="display: none;">
             <div class="row">
+              <div class="col-sm-6 form-group">
+                <input type="date" name="fodselsdato" class="form-control" aria-label="Fødselsdato" data-required>
+              </div>
               <div class="col-sm-6 form-group">
                 <input type="number" name="belop" class="form-control" placeholder="Velg selv beløp (kr per år) *" aria-label="Beløp per år i kroner" min="1" data-required>
               </div>

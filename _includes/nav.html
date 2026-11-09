@@ -1,26 +1,30 @@
 <style>
   @media (min-width: 768px) {
     .navbar-nav .fleet-dropdown:hover > .dropdown-menu,
-    .navbar-nav .ekspedisjon-dropdown:hover > .dropdown-menu,
+    .navbar-nav .om-dropdown:hover > .dropdown-menu,
+    .navbar-nav .forskning-dropdown:hover > .dropdown-menu,
     .navbar-nav .medlemskap-dropdown:hover > .dropdown-menu {
       display: block;
     }
 
     .navbar-nav .fleet-dropdown:hover > a,
-    .navbar-nav .ekspedisjon-dropdown:hover > a,
+    .navbar-nav .om-dropdown:hover > a,
+    .navbar-nav .forskning-dropdown:hover > a,
     .navbar-nav .medlemskap-dropdown:hover > a {
       background-color: rgba(255, 255, 255, 0.08);
     }
   }
 
   .fleet-dropdown .dropdown-menu,
-  .ekspedisjon-dropdown .dropdown-menu,
+  .om-dropdown .dropdown-menu,
+  .forskning-dropdown .dropdown-menu,
   .medlemskap-dropdown .dropdown-menu {
     min-width: 300px;
   }
 
   .fleet-dropdown .dropdown-menu > li > a,
-  .ekspedisjon-dropdown .dropdown-menu > li > a,
+  .om-dropdown .dropdown-menu > li > a,
+  .forskning-dropdown .dropdown-menu > li > a,
   .medlemskap-dropdown .dropdown-menu > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -28,7 +32,8 @@
   }
 
   .fleet-dropdown .dropdown-menu small,
-  .ekspedisjon-dropdown .dropdown-menu small,
+  .om-dropdown .dropdown-menu small,
+  .forskning-dropdown .dropdown-menu small,
   .medlemskap-dropdown .dropdown-menu small {
     display: block;
     margin-top: 3px;
@@ -39,10 +44,12 @@
 
   .fleet-dropdown .dropdown-menu > li > a:hover small,
   .fleet-dropdown .dropdown-menu > li > a:focus small,
-  .ekspedisjon-dropdown .dropdown-menu > li > a:hover small,
-  .ekspedisjon-dropdown .dropdown-menu > li > a:focus small,
+  .forskning-dropdown .dropdown-menu > li > a:hover small,
+  .forskning-dropdown .dropdown-menu > li > a:focus small,
   .medlemskap-dropdown .dropdown-menu > li > a:hover small,
-  .medlemskap-dropdown .dropdown-menu > li > a:focus small {
+  .medlemskap-dropdown .dropdown-menu > li > a:focus small,
+  .om-dropdown .dropdown-menu > li > a:hover small,
+  .om-dropdown .dropdown-menu > li > a:focus small {
     color: inherit;
   }
 </style>
@@ -70,8 +77,32 @@
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
 
-        <!-- About -->
-        <li><a class="page-scroll" href="{{ site.baseurl }}/#about">Om oss</a></li>
+        <!-- Om oss (dropdown) -->
+        <li class="dropdown om-dropdown">
+          <a href="{{ site.baseurl }}/#about" class="dropdown-toggle" data-toggle="dropdown" role="button"
+             aria-haspopup="true" aria-expanded="false">
+            Om oss
+            <span class="caret"></span>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li>
+              <a class="page-scroll" href="{{ site.baseurl }}/#about">
+                Om oss
+                <small>Fellesskap og misjon</small>
+              </a>
+            </li>
+
+            <li role="separator" class="divider"></li>
+
+            <li>
+              <a href="{{ site.baseurl }}/ekspedisjoner/">
+                Vår motivasjon
+                <small>Bærekraftig vitenskap</small>
+              </a>
+            </li>
+          </ul>
+        </li>
 
         <!-- Fleet dropdown -->
         <li class="dropdown fleet-dropdown">
@@ -136,19 +167,19 @@
           </ul>
         </li>
 
-        <!-- Forskning og ekspedisjoner (dropdown) -->
-        <li class="dropdown ekspedisjon-dropdown">
-          <a href="{{ site.baseurl }}/ekspedisjoner/" class="dropdown-toggle" data-toggle="dropdown" role="button"
+        <!-- Forskning (dropdown) -->
+        <li class="dropdown forskning-dropdown">
+          <a href="{{ site.baseurl }}/#forskning" class="dropdown-toggle" data-toggle="dropdown" role="button"
              aria-haspopup="true" aria-expanded="false">
-            Forskning og ekspedisjoner
+            Forskning
             <span class="caret"></span>
           </a>
 
           <ul class="dropdown-menu">
             <li>
-              <a href="{{ site.baseurl }}/ekspedisjoner/">
-                Vår motivasjon
-                <small>Bærekraftig vitenskap</small>
+              <a class="page-scroll" href="{{ site.baseurl }}/#forskning">
+                Forskning
+                <small>Hva vi forsker på</small>
               </a>
             </li>
 

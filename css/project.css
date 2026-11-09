@@ -193,7 +193,15 @@
   }
 }
 
-/* Contact form CTA: white text on the theme-orange button */
-#kontaktskjema .btn-primary {
+/* Contact form CTA: white text on the theme-orange button.
+   .project-content a (orange link color) outranks the earlier
+   #kontaktskjema .btn-primary rule, so target all buttons in content. */
+#kontaktskjema .btn-primary,
+.project-content .btn-primary {
+  color: #ffffff;
+}
+
+.project-content .btn-primary:hover,
+.project-content .btn-primary:focus {
   color: #ffffff;
 }
