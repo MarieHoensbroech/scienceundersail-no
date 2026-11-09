@@ -164,9 +164,10 @@ all verification via git history + post-push visual checks by user.
 
 - Endpoint `https://form.taxi/s/ghkelxkw` in `_includes/contact.html`, wired and live
 - Hidden: `_subject`, `_next` → https://scienceundersail.no/takk/, `_gotcha` honeypot; UTF-8; consent checkbox
-- Two modes via dropdown + vanilla JS: medlemskap (navn, email, fødselsdato
-  required; adresse field DROPPED per user, commit 268cca6) / oppdrag (navn,
-  email, tjeneste, melding)
+- Four modes via dropdown + vanilla JS: medlemskap (navn, email, fødselsdato
+  required; adresse field DROPPED per user, commit 268cca6) / stottemedlem
+  (fodselsdato + belop) / oppdrag (navn, email, tjeneste, melding) / annet
+  (hint text only + shared navn/email/melding fields)
 - **fødselsdato NOT fødselsnummer** (user confirmed; strictly personal data under Norwegian law)
 - Success page `takk.md` (/takk/, "Den ligger trygt i havn")
 - User must still test both form modes end-to-end on the live site

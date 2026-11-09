@@ -16,13 +16,15 @@ hvor lenge vi lagrer dem, og hvilke rettigheter du har.
 Vi samler inn personopplysninger gjennom kontaktskjemaet på nettsiden, for å svare
 på henvendelser, ta imot medlemskap og organisere aktiviteter og samarbeid.
 
-Skjemaet brukes til to formål:
+Skjemaet brukes til henvendelser om medlemskap, støttemedlemskap, oppdrag
+og andre spørsmål:
 
-- **Medlemskap:** Vi behandler fullt navn, e-postadresse og fødselsdato
-  for å føre medlemsregisteret og holde kontakten med medlemmene.
-- **Forespørsel om oppdrag:** Vi behandler fullt navn, e-postadresse, hvilken
-  tjeneste det gjelder og eventuell melding for å kunne svare på og følge opp
-  forespørselen.
+- **Medlemskap og støttemedlemskap:** Vi behandler fullt navn, e-postadresse
+  og fødselsdato (for støttemedlemskap også ønsket årlig beløp) for å føre
+  medlemsregisteret og holde kontakten med medlemmene.
+- **Forespørsel om oppdrag og andre henvendelser:** Vi behandler fullt navn,
+  e-postadresse, eventuell tjeneste og melding for å kunne svare på og følge
+  opp henvendelsen.
 
 For medlemskap er navn og e-postadresse nødvendig for å føre medlemsregisteret.
 For forespørsler er navn og e-postadresse nødvendig for at vi kan svare deg. Behandlingen av opplysningene du oppgir skjer på

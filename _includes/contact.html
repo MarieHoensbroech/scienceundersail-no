@@ -5,7 +5,7 @@
         <h2 class="section-heading">Kontakt</h2>
         <hr class="primary">
         <p class="text-muted">
-          Ønsker du å samarbeide, støtte forskningen vår eller bli medlem?
+          Ønsker du å samarbeide, støtte forskningen vår, bli medlem eller spørre om noe annet?
           Send oss en melding, så hører du fra oss så snart som mulig.
         </p>
       </div>
@@ -24,6 +24,7 @@
               <option value="medlemskap" selected>Jeg vil bli medlem</option>
               <option value="stottemedlem">Jeg vil bli støttemedlem</option>
               <option value="oppdrag">Jeg vil booke dere / forespørre om oppdrag</option>
+              <option value="annet">Jeg vil spørre om noe annet</option>
             </select>
           </div>
 
@@ -71,6 +72,13 @@
             </div>
           </div>
 
+          <!-- Annet: veiledning -->
+          <div id="annet-fields" style="display: none;">
+            <div class="form-group">
+              <p class="text-muted" style="margin-bottom: 0;">Skriv kort hva henvendelsen gjelder i meldingsfeltet under.</p>
+            </div>
+          </div>
+
           <div class="form-group">
             <textarea name="melding" class="form-control" rows="4" placeholder="Melding (valgfritt)" aria-label="Melding"></textarea>
           </div>
@@ -99,7 +107,8 @@
     var blocks = {
       medlemskap: document.getElementById('medlem-fields'),
       stottemedlem: document.getElementById('stotte-fields'),
-      oppdrag: document.getElementById('oppdrag-fields')
+      oppdrag: document.getElementById('oppdrag-fields'),
+      annet: document.getElementById('annet-fields')
     };
 
     function update() {
