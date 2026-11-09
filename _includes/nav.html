@@ -1,25 +1,30 @@
 <style>
   @media (min-width: 768px) {
-    .navbar-nav .fleet-dropdown:hover > .dropdown-menu {
+    .navbar-nav .fleet-dropdown:hover > .dropdown-menu,
+    .navbar-nav .ekspedisjon-dropdown:hover > .dropdown-menu {
       display: block;
     }
 
-    .navbar-nav .fleet-dropdown:hover > a {
+    .navbar-nav .fleet-dropdown:hover > a,
+    .navbar-nav .ekspedisjon-dropdown:hover > a {
       background-color: rgba(255, 255, 255, 0.08);
     }
   }
 
-  .fleet-dropdown .dropdown-menu {
+  .fleet-dropdown .dropdown-menu,
+  .ekspedisjon-dropdown .dropdown-menu {
     min-width: 300px;
   }
 
-  .fleet-dropdown .dropdown-menu > li > a {
+  .fleet-dropdown .dropdown-menu > li > a,
+  .ekspedisjon-dropdown .dropdown-menu > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
     white-space: normal;
   }
 
-  .fleet-dropdown .dropdown-menu small {
+  .fleet-dropdown .dropdown-menu small,
+  .ekspedisjon-dropdown .dropdown-menu small {
     display: block;
     margin-top: 3px;
     color: #777777;
@@ -28,7 +33,9 @@
   }
 
   .fleet-dropdown .dropdown-menu > li > a:hover small,
-  .fleet-dropdown .dropdown-menu > li > a:focus small {
+  .fleet-dropdown .dropdown-menu > li > a:focus small,
+  .ekspedisjon-dropdown .dropdown-menu > li > a:hover small,
+  .ekspedisjon-dropdown .dropdown-menu > li > a:focus small {
     color: inherit;
   }
 </style>
@@ -88,14 +95,38 @@
           </ul>
         </li>
 
-        <!-- Tidligere ekspedisjoner -->
-        <li><a href="{{ site.baseurl }}/ekspedisjoner/">Tidligere ekspedisjoner</a></li>
+        <!-- Tidligere ekspedisjoner (dropdown) -->
+        <li class="dropdown ekspedisjon-dropdown">
+          <a href="{{ site.baseurl }}/ekspedisjoner/" class="dropdown-toggle" data-toggle="dropdown" role="button"
+             aria-haspopup="true" aria-expanded="false">
+            Tidligere ekspedisjoner
+            <span class="caret"></span>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li>
+              <a href="{{ site.baseurl }}/ekspedisjoner/">
+                Vår motivasjon
+                <small>Bærekraftig vitenskap</small>
+              </a>
+            </li>
+
+            <li role="separator" class="divider"></li>
+
+            <li>
+              <a href="{{ site.baseurl }}/ekspedisjoner/accidental-epiphytes/">
+                Tilfeldige epifytter
+                <small>Accidental epiphytes — vår første publiserte studie</small>
+              </a>
+            </li>
+          </ul>
+        </li>
 
         <!-- Bli forsker for en dag -->
         <li><a class="page-scroll" href="{{ site.baseurl }}/#bli-forsker">Bli forsker for en dag</a></li>
 
         <!-- Oppdrag / Forskning / Kontakt -->
-        <li><a class="page-scroll" href="{{ site.baseurl }}/#forskning">Forskning</a></li>
+        <li><a class="page-scroll" href="{{ site.baseurl }}/#forskning">Forskning og ekspedisjoner</a></li>
         <li><a class="page-scroll" href="{{ site.baseurl }}/#oppdrag">Oppdrag</a></li>
         <li><a class="page-scroll" href="{{ site.baseurl }}/#contact">Kontakt</a></li>
 

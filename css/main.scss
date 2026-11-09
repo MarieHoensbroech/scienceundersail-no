@@ -159,6 +159,7 @@ header .header-content .header-content-inner p {
 
 @media (max-width: 767px) {
   .fleet-box img { height: 260px; }
+}
 
 .expedition-link {
   display: inline-block;
@@ -197,18 +198,20 @@ header .header-content .header-content-inner p {
   font-size: 14px;
   color: #777777;
 }
-}
 
 /* ---------------------------------
    Profiles: make Font Awesome + Academicons match the theme color
    --------------------------------- */
 #forskning i.fa,
-#forskning i.ai {
+#forskning i.ai,
+#profiler i.fa,
+#profiler i.ai {
   color: $theme-primary;
   margin-bottom: 12px;
 }
 
-#forskning h3 {
+#forskning h3,
+#profiler h3 {
   margin-top: 10px;
   margin-bottom: 0;
 }
