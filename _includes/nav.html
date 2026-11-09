@@ -275,13 +275,6 @@
     closeAll(t);
     if (opening) { t.parentElement.classList.add("open"); t.setAttribute("aria-expanded", "true"); }
     else { t.setAttribute("aria-expanded", "false"); }
-    var m = menuOf(t);
-    var ok = m && m.getBoundingClientRect().height > 0;
-    var badge = document.getElementById("nv3badge");
-    if (badge) {
-      if (!ok) { badge.hidden = false; badge.textContent = "nv3: dropdown Aapner IKKE - display: " + (m ? getComputedStyle(m).display : "ingen") + ", maxh: " + (m ? getComputedStyle(m).maxHeight : "?"); }
-      else { badge.hidden = true; }
-    }
   }, { passive: false });
   // Ghost-click suppressor: after a touch-open, swallow only clicks that
   // land on the toggle itself - real clicks on menu items must pass through.
@@ -326,4 +319,3 @@
   }, { capture: true });
 })();
 </script>
-<div id="nv3badge" hidden style="position:fixed;bottom:0;left:0;right:0;z-index:99999;background:#a00;color:#fff;font:12px monospace;padding:6px;text-align:center;"></div>

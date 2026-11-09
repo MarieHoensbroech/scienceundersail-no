@@ -225,9 +225,8 @@ all verification via git history + post-push visual checks by user.
   ghost-click suppressor only for clicks on the toggle (not items);
   nav fallback (28fc93c): if a tap on a .dropdown-menu a produces no click
   within 400ms, navigate via location.href (10px guard, click cancels).
-  nv3badge div: red diagnostic bar if dropdown opens with zero height
-  (keep until user confirms all works, then may remove). User CONFIRMED:
-  dropdowns now OPEN (6f61f09); item-tap navigation pending user test
+  User CONFIRMED ALL WORKS (9aa8c9d + 28fc93c): dropdowns open, item taps
+  navigate. nv3badge div + badge-check code REMOVED after confirmation
 - CACHE CONVENTION: local scripts + project.css load with ?v=YYYYMMDD;
   BUMP the string on every JS/CSS fix (Fastly max-age=600, browser cache
   otherwise serves old assets; 20261109 -> 20261110 at 16f398d)
