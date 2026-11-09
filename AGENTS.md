@@ -55,11 +55,13 @@ all verification via git history + post-push visual checks by user.
   (#medlemskap, renamed from bli-forsker 2026-11-09 per user), oppdrag
   (#oppdrag), forskning (#forskning), contact (#contact contains heading +
   form anchored at #kontaktskjema; envelope row above form REMOVED per user)
-- Nav order (order of appearance on homepage, per user 2026-11-09):
-  Om oss · Flåten (dropdown) · Medlemskap (dropdown: Om medlemskap →
-  #medlemskap, /medlemskap/forsker-for-en-dag/, /medlemskap/rydding-og-bekjempelse/)
-  · Forskning og ekspedisjoner (dropdown) · Oppdrag · Kontakt · language globe.
-  Old top-level "Bli forsker for en dag" link REMOVED
+- Nav order (updated 2026-11-09, commit 72f91ff): Om oss (dropdown:
+  Om oss → #about, Vår motivasjon → /ekspedisjoner/) · Flåten (dropdown) ·
+  Medlemskap (dropdown: Om medlemskap → #medlemskap,
+  /medlemskap/forsker-for-en-dag/, /medlemskap/rydding-og-bekjempelse/) ·
+  Forskning (dropdown: Forskning → #forskning, Tilfeldige epifytter →
+  accidental-epiphytes) · Oppdrag · Kontakt · language globe. Homepage
+  SECTION heading in forskning.html still reads "Forskning og ekspedisjoner"
 - Scroll story: about "Bli med om bord" → #fleet; fleet "Slik kan du være
   med" → #medlemskap; medlemskap "Finn ut hva vi gjør" → #forskning;
   forskning: icon tile → /ekspedisjoner/ + "Slik finansierer vi
@@ -89,11 +91,16 @@ all verification via git history + post-push visual checks by user.
 - `medlemskap/forsker-for-en-dag.md` (/medlemskap/forsker-for-en-dag/):
   what a day on board contains, why folkeforskning (links to
   /ekspedisjoner/), register interest → kontaktskjemaet
+- Medlemskap subpage header images (72f91ff): forsker-for-en-dag.md →
+  fleet/bliforsker.jpg (live), rydding-og-bekjempelse.md → fleet/rydding.jpg
+  (FILE NOT YET ADDED by user - header shows gradient only until added)
 - All three medlemskap md pages: CTA button (Bli medlem / Registrer
   interesse) is centered `.btn-primary.page-scroll` → `#kontaktskjema`
   (the form is in the project layout, so it scrolls to the form ON the
   subpage; fixed ef04fc3 — was a link to the front page form). White text
-  on the button: css/project.css `#kontaktskjema .btn-primary { color: #fff }`
+  on the button: css/project.css `#kontaktskjema .btn-primary, .project-content
+  .btn-primary { color: #fff }` (project-content a orange link color outranked
+  the old kontaktskjema-only rule; fixed 72f91ff)
 - `medlemskap/rydding-og-bekjempelse.md` (/medlemskap/rydding-og-bekjempelse/):
   ryddedag contents (strandrydding, kystskog, parkslirekne, stillehavsøsters),
   reporting as data, register interest → kontaktskjemaet
@@ -103,7 +110,9 @@ all verification via git history + post-push visual checks by user.
   add databehandler to personvern). Form has third mode "Jeg vil bli
   støttemedlem": navn, e-post + belop (number, kr per år, required when
   visible); 3-mode JS in contact.html disables hidden blocks so their fields
-  are NOT submitted; mode values: medlemskap / stottemedlem / oppdrag
+  are NOT submitted; mode values: medlemskap / stottemedlem / oppdrag.
+  Stottemedlem mode has fodselsdato (left) + belop (right) since 72f91ff
+  (per user, same layout as medlemskap mode)
 - Nav Medlemskap item is a dropdown (per user) with subpages; medlemskap
   dropdown added to hover-open CSS in nav.html (<style> block)
 
@@ -132,8 +141,8 @@ all verification via git history + post-push visual checks by user.
   on ekspedisjoner, accepi.jpg on accidental-epiphytes); pages without it
   keep css default (VA)
 - ekspedisjoner.md (/ekspedisjoner/): own page, ONLY the motivation:
-  'Bærekraftig vitenskap' + closing link to study sub-page. Subtitle
-  'Vår motivasjon'
+  'Bærekraftig vitenskap' + closing link to study sub-page. TITLE now
+  'Vår motivasjon' (72f91ff, matches nav label), subtitle 'Vår motivasjon'
 - accidental-epiphytes.md: 'Ekspedisjonen og studien' (expedition + DOI
   study link, one line) + 'Utforsk observasjonene' (Connect Cloud map
   iframe 720px + fallback). iNaturalist link points at
