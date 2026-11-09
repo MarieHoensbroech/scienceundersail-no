@@ -1,30 +1,35 @@
 <style>
   @media (min-width: 768px) {
     .navbar-nav .fleet-dropdown:hover > .dropdown-menu,
-    .navbar-nav .ekspedisjon-dropdown:hover > .dropdown-menu {
+    .navbar-nav .ekspedisjon-dropdown:hover > .dropdown-menu,
+    .navbar-nav .medlemskap-dropdown:hover > .dropdown-menu {
       display: block;
     }
 
     .navbar-nav .fleet-dropdown:hover > a,
-    .navbar-nav .ekspedisjon-dropdown:hover > a {
+    .navbar-nav .ekspedisjon-dropdown:hover > a,
+    .navbar-nav .medlemskap-dropdown:hover > a {
       background-color: rgba(255, 255, 255, 0.08);
     }
   }
 
   .fleet-dropdown .dropdown-menu,
-  .ekspedisjon-dropdown .dropdown-menu {
+  .ekspedisjon-dropdown .dropdown-menu,
+  .medlemskap-dropdown .dropdown-menu {
     min-width: 300px;
   }
 
   .fleet-dropdown .dropdown-menu > li > a,
-  .ekspedisjon-dropdown .dropdown-menu > li > a {
+  .ekspedisjon-dropdown .dropdown-menu > li > a,
+  .medlemskap-dropdown .dropdown-menu > li > a {
     padding-top: 10px;
     padding-bottom: 10px;
     white-space: normal;
   }
 
   .fleet-dropdown .dropdown-menu small,
-  .ekspedisjon-dropdown .dropdown-menu small {
+  .ekspedisjon-dropdown .dropdown-menu small,
+  .medlemskap-dropdown .dropdown-menu small {
     display: block;
     margin-top: 3px;
     color: #777777;
@@ -35,7 +40,9 @@
   .fleet-dropdown .dropdown-menu > li > a:hover small,
   .fleet-dropdown .dropdown-menu > li > a:focus small,
   .ekspedisjon-dropdown .dropdown-menu > li > a:hover small,
-  .ekspedisjon-dropdown .dropdown-menu > li > a:focus small {
+  .ekspedisjon-dropdown .dropdown-menu > li > a:focus small,
+  .medlemskap-dropdown .dropdown-menu > li > a:hover small,
+  .medlemskap-dropdown .dropdown-menu > li > a:focus small {
     color: inherit;
   }
 </style>
@@ -95,6 +102,40 @@
           </ul>
         </li>
 
+        <!-- Medlemskap (med underaktiviteter) -->
+        <li class="dropdown medlemskap-dropdown">
+          <a href="{{ site.baseurl }}/#medlemskap" class="dropdown-toggle" data-toggle="dropdown" role="button"
+             aria-haspopup="true" aria-expanded="false">
+            Medlemskap
+            <span class="caret"></span>
+          </a>
+
+          <ul class="dropdown-menu">
+            <li>
+              <a class="page-scroll" href="{{ site.baseurl }}/#medlemskap">
+                Om medlemskap
+                <small>Hva et medlemskap innebærer</small>
+              </a>
+            </li>
+
+            <li role="separator" class="divider"></li>
+
+            <li>
+              <a href="{{ site.baseurl }}/medlemskap/forsker-for-en-dag/">
+                Forsker for en dag
+                <small>Dags- og helgeturer med feltarbeid om bord</small>
+              </a>
+            </li>
+
+            <li>
+              <a href="{{ site.baseurl }}/medlemskap/rydding-og-bekjempelse/">
+                Rydding og bekjempelse
+                <small>Strandrydding, kystskog og invaderende arter</small>
+              </a>
+            </li>
+          </ul>
+        </li>
+
         <!-- Forskning og ekspedisjoner (dropdown) -->
         <li class="dropdown ekspedisjon-dropdown">
           <a href="{{ site.baseurl }}/ekspedisjoner/" class="dropdown-toggle" data-toggle="dropdown" role="button"
@@ -121,9 +162,6 @@
             </li>
           </ul>
         </li>
-
-        <!-- Bli forsker for en dag -->
-        <li><a class="page-scroll" href="{{ site.baseurl }}/#bli-forsker">Bli forsker for en dag</a></li>
 
         <!-- Oppdrag / Kontakt -->
         <li><a class="page-scroll" href="{{ site.baseurl }}/#oppdrag">Oppdrag</a></li>
