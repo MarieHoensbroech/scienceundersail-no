@@ -214,36 +214,34 @@ header .header-content .header-content-inner p {
 }
 
 /* ---------------------------------
-   Profiler: modest footer strip with inline icons
+   Profiler: icons inline in the credits footer
    --------------------------------- */
-section.profiler-footer {
-  padding: 20px 0;
-  border-top: 1px solid rgba(0, 0, 0, 0.06);
-  background: #f8f8f8;
+.credits .profiler-icons {
+  margin-top: 14px;
 }
 
-section.profiler-footer .profiler-heading {
-  margin: 0 0 8px;
-  font-size: 14px;
+.credits .profiler-icons .profiler-heading {
+  margin: 0 0 6px;
+  font-size: 12px;
   letter-spacing: 1px;
   text-transform: uppercase;
   color: #999999;
 }
 
-section.profiler-footer a {
+.credits .profiler-icons a {
   display: inline-block;
-  margin: 0 14px;
+  margin: 0 12px;
   color: #777777;
   transition: color 0.3s ease;
 }
 
-section.profiler-footer a:hover,
-section.profiler-footer a:focus {
+.credits .profiler-icons a:hover,
+.credits .profiler-icons a:focus {
   color: $theme-primary;
 }
 
-section.profiler-footer i {
-  font-size: 22px;
+.credits .profiler-icons i {
+  font-size: 20px;
   vertical-align: middle;
 }
 
