@@ -40,8 +40,12 @@ lovlig grunnlag. Vi bruker følgende databehandlere:
   laster ned sidene fra GitHubs servere; GitHub behandler tekniske data
   (blant annet IP-adresse) etter egne vilkår.
 - **Posit Connect Cloud (Posit Public Company, USA):** Hoster
-  kartapplikasjonen på salka-valka-siden. Nettleseren din laster kartet fra
+  kartapplikasjonen på ekspedisjonssiden. Nettleseren din laster kartet fra
   Posits servere; Posit behandler tekniske data (blant annet IP-adresse)
+  etter egne vilkår.
+- **OpenStreetMap (OpenStreetMap Foundation, Storbritannia):** De
+  interaktive posisjonskartene på båtsidene lastes fra OpenStreetMaps
+  servere; OpenStreetMap behandler tekniske data (blant annet IP-adresse)
   etter egne vilkår.
 
 Vi bruker ellers ingen sporingsverktøy eller analyseverktøy på nettsiden.
