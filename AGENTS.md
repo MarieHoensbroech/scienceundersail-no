@@ -165,7 +165,8 @@ all verification via git history + post-push visual checks by user.
 
 - `personvern.md` (/personvern/) follows standard.no's section structure
   (Hvorfor → Utlevering → Lagringstid → Rettigheter → Klager → Endringer → Cookies → Kontakt)
-- No email address published anywhere; no cookies/analytics set by the site
+- No email address published anywhere. GA4 cookies ONLY after consent
+  (see SEO section); no other cookies/analytics
 - Known cleanup: Google Fonts still loaded from Google CDN in head.html —
   IP transfer to Google; self-host fonts if user wants full compliance
 
