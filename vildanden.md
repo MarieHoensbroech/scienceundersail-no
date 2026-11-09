@@ -17,10 +17,10 @@ Fra Vildanden skal vi undersøke kystnaturen som et sammenhengende landskap, fra
 
 ## Der hun ligger nå
 
-Vildanden ligger i dag i Strusshamn Kystlag på Askøy, ved innseilingen til Bergen.
+Vildanden ligger i dag på Holmen i Strusshamn på Askøy, ved innseilingen til Bergen.
 
-<iframe src="https://www.openstreetmap.org/export/embed.html?bbox=5.1723055%2C60.3845289%2C5.2123055%2C60.4245289&layer=mapnik&marker=60.4045289%2C5.1923055"
-  title="Kart: Vildanden ligger i Strusshamn Kystlag, Askøy"
+<iframe src="https://www.openstreetmap.org/export/embed.html?bbox=5.1815099%2C60.3927614%2C5.2015099%2C60.4127614&layer=mapnik&marker=60.4027614%2C5.1915099"
+  title="Kart: Vildanden ligger på Holmen i Strusshamn, Askøy"
   width="100%" height="360" loading="lazy">
 </iframe>
 
