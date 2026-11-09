@@ -69,9 +69,12 @@ all verification via git history + post-push visual checks by user.
   aktivitetene våre" → #oppdrag; oppdrag ends with envelope icon "Ta
   kontakt" → #kontaktskjema (replaced old "Ta kontakt" button per user).
   All `page-scroll` (1250ms). Order/wording intentional, do not "fix"
-- Footer credits: © line + `hr.footer-rule` + profiler icons — "Finn oss
-  her" strip is CENTERED below Personvern with a horizontal rule (per user
-  2026-11-09); CSS in css/main.scss `.credits hr.footer-rule` +
+- Footer credits (2e4ca3c + names): org line = © Science under Sail 2026 ·
+  Marie Hoensbroech & Dries Martens · Sandsliåsen 33, 5254 Sandsli, Norge ·
+  Org.nr (registry transparency); Personvern + Kakeinnstillinger UNDERNEATH
+  the org line (per user). Then `hr.footer-rule` + profiler icons - "Finn oss
+  her" strip CENTERED below with a horizontal rule (per user 2026-11-09);
+  CSS in css/main.scss `.credits hr.footer-rule` +
   `text-align: center` on .profiler-icons
 - Bootstrap 3 + jQuery (Start Bootstrap Creative theme); most files CRLF —
   edit tool often fails to match (CRLF/mixed endings): use Python heredoc
