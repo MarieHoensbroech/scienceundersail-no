@@ -53,6 +53,11 @@ all verification via git history + post-push visual checks by user.
 - `medlemskap/forsker-for-en-dag.md` (/medlemskap/forsker-for-en-dag/):
   what a day on board contains, why folkeforskning (links to
   /ekspedisjoner/), register interest → kontaktskjemaet
+- All three medlemskap md pages: CTA button (Bli medlem / Registrer
+  interesse) is centered `.btn-primary.page-scroll` → `#kontaktskjema`
+  (the form is in the project layout, so it scrolls to the form ON the
+  subpage; fixed ef04fc3 — was a link to the front page form). White text
+  on the button: css/project.css `#kontaktskjema .btn-primary { color: #fff }`
 - `medlemskap/rydding-og-bekjempelse.md` (/medlemskap/rydding-og-bekjempelse/):
   ryddedag contents (strandrydding, kystskog, parkslirekne, stillehavsøsters),
   reporting as data, register interest → kontaktskjemaet
@@ -147,6 +152,13 @@ all verification via git history + post-push visual checks by user.
   killing the handler so buttons jumped instead of scrolled (fixed 268cca6)
 - CSS for oppdrag images keyed to `#oppdrag` (was #portfolio pre-rename)
 - vildanden.md content was truncated at commit f9629ad; intact version at 07eac16
-- Git: user commits via RStudio Git pane (needs commit message; unstage is harmless)
+- Git: user commits via RStudio Git pane (needs commit message; unstage is harmless);
+  assistant may commit+push on explicit user request (ef04fc3). AGENTS.md is tracked
 - Edit tool often fails on CRLF files with "String not found" — use Python
-  heredoc scripts for nav.html, oppdrag.html and other CRLF files
+  heredoc scripts for nav.html, oppdrag.html and other CRLF files (incl. all
+  new medlemskap md files)
+- Hash-arrival scroll (js/creative.js): target must be measured BEFORE
+  `$('html, body').hide()` — hidden body reports offset().top = 0, which
+  scrolled every subpage arrival to the top (fixed ef04fc3). Scroll re-runs
+  on img one('load') + window load because subpage images shift layout.
+  Do not regress to hide-then-measure
