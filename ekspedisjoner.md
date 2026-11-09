@@ -1,6 +1,7 @@
 ---
 layout: project
 title: Tidligere ekspedisjoner
+description: "Tidligere ekspedisjoner og bærekraftig vitenskap – Science under Sail."
 subtitle: Vår motivasjon
 permalink: /ekspedisjoner/
 lang: nb

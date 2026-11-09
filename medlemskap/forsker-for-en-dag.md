@@ -1,6 +1,7 @@
 ---
 layout: project
 title: Forsker for en dag
+description: "Forsker for en dag: bli med om bord på en ekte feltforskerdag og bidra til folkeforskning fra seilbåt."
 subtitle: Dags- og helgeturer med deltakende feltarbeid
 permalink: /medlemskap/forsker-for-en-dag/
 lang: nb

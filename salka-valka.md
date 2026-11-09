@@ -1,6 +1,7 @@
 ---
 layout: project
 title: Salka Valka
+description: "SV Salka Valka er ekspedisjonsbåten vår – seilbåtbasert feltforskning i Europa, med publisert studie fra Spania."
 subtitle: En norsk seilbåt for forskning uten grenser
 permalink: /salka-valka/
 lang: nb

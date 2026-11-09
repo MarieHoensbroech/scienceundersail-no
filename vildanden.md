@@ -1,6 +1,7 @@
 ---
 layout: project
 title: Vildanden Kystlaboratorium
+description: "Vildanden er Science under Sails kystlaboratorium – seilbåtbasert feltforskning på Askøy utenfor Bergen."
 subtitle: Forskning fra havbunn til fjell
 permalink: /vildanden/
 lang: nb

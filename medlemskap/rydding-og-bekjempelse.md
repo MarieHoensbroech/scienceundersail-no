@@ -1,6 +1,7 @@
 ---
 layout: project
 title: Rydding og bekjempelse
+description: "Rydding og bekjempelse: strandrydding, kystskogrydding og bekjempelse av parkslirekne og stillehavsøsters."
 subtitle: Strandrydding, kystskog og invaderende arter
 permalink: /medlemskap/rydding-og-bekjempelse/
 lang: nb

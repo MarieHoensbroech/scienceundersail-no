@@ -1,6 +1,7 @@
 ---
 layout: project
 title: Medlemskap
+description: "Bli medlem av Science under Sail – dugnad om bord, forsker for en dag og rydding og bekjempelse. Medlemskapet er gratis."
 subtitle: Bli en del av fellesskapet om bord
 permalink: /medlemskap/
 lang: nb

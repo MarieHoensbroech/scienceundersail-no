@@ -1,6 +1,7 @@
 ---
 layout: project
 title: Accidental epiphytes
+description: "Les om ekspedisjonen til Spania og den publiserte studien, og utforsk observasjonene på det interaktive kartet."
 subtitle: Vår første publiserte studie
 permalink: /ekspedisjoner/accidental-epiphytes/
 lang: nb

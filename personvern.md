@@ -1,6 +1,7 @@
 ---
 layout: project
 title: Personvern
+description: "Personvernerklæring for Science under Sail: hvilke personopplysninger vi samler inn, hvorfor, hvor lenge vi lagrer dem, og hvilke rettigheter du har."
 subtitle: Hvordan Science under Sail behandler personopplysninger
 permalink: /personvern/
 lang: nb
@@ -47,8 +48,14 @@ lovlig grunnlag. Vi bruker følgende databehandlere:
   interaktive posisjonskartene på båtsidene lastes fra OpenStreetMaps
   servere; OpenStreetMap behandler tekniske data (blant annet IP-adresse)
   etter egne vilkår.
+- **Google (Google Ireland Ltd. / Google LLC, USA):** Nettsiden bruker
+  Google Analytics 4 til brukerstatistikk, lastet inn via Google Tag
+  Manager. Analytiske informasjonskapsler settes og data sendes til Google
+  kun dersom du samtykker i cookie-banneren. Google oppgir at IP-adresser
+  ikke logges eller lagres i Google Analytics 4. Samtykket kan trekkes
+  tilbake når som helst via «Kakeinnstillinger» i sidefoten.
 
-Vi bruker ellers ingen sporingsverktøy eller analyseverktøy på nettsiden.
+Vi bruker ellers ingen andre sporings- eller analyseverktøy på nettsiden.
 
 ## Lagringstid
 
@@ -79,9 +86,15 @@ erklæringen bli oppdatert. Sist oppdatert: november 2026.
 
 ## Cookies (informasjonskapsler)
 
-Nettsiden bruker ingen informasjonskapsler til statistikk, markedsføring eller
-innlogging. Skjemaet håndteres av Form.taxi; innsendingen skjer direkte til
-Form.taxi sitt endepunkt, og Eventuell informasjonskapselbruk knyttet til
+Nettsiden setter ingen informasjonskapsler til statistikk uten ditt samtykke.
+Hvis du samtykker i cookie-banneren, setter Google Analytics 4 analytiske
+informasjonskapsler (blant annet _ga) som lagres i inntil to år og brukes til
+brukerstatistikk. Velger du «Bare nødvendige», settes ingen slike kapsler.
+Samtykkevalget ditt lagres i nettleseren din og kan endres når som helst via
+«Kakeinnstillinger» i sidefoten.
+
+Skjemaet håndteres av Form.taxi; innsendingen skjer direkte til
+Form.taxi sitt endepunkt, og eventuell informasjonskapselbruk knyttet til
 innsendingen reguleres av Form.taxi sin personvernerklæring
 (form.taxi/en/privacy).
 
