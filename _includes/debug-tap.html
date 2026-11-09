@@ -1,0 +1,56 @@
+<div id="tapdbg" style="position: fixed; bottom: 0; left: 0; right: 0; z-index: 99999; background: #000; color: #0f0; font: 11px/1.5 monospace; padding: 8px; white-space: pre-wrap; max-height: 45vh; overflow-y: auto;"></div>
+
+<script>
+  (function () {
+    var box = document.getElementById('tapdbg');
+    function out(s) { box.textContent += s + "\n"; box.scrollTop = box.scrollHeight; }
+
+    out('Tap-logger aktiv. Tap p\u00e5 hamburger + en meny (f.eks. Fl\u00e5ten).');
+    out('viewport: ' + window.innerWidth + 'x' + window.innerHeight);
+
+    function describe(el) {
+      var parts = [];
+      while (el && parts.length < 4) {
+        parts.push(el.tagName + (el.className && typeof el.className === 'string' ? '.' + el.className.trim().split(/\s+/).slice(0, 3).join('.') : ''));
+        el = el.parentElement;
+      }
+      return parts.join(' < ');
+    }
+
+    function handler(type) {
+      return function (e) {
+        var t = e.target;
+        if (!t) return;
+        var toggle = t.closest ? t.closest('[data-toggle="dropdown"]') : null;
+        var ham = t.closest ? t.closest('.navbar-toggle') : null;
+        if (!toggle && !ham) return;
+        var x = e.touches && e.touches[0] ? Math.round(e.touches[0].clientX) : (e.clientX || 0);
+        var y = e.touches && e.touches[0] ? Math.round(e.touches[0].clientY) : (e.clientY || 0);
+        out('--- ' + type + ' @ ' + x + ',' + y + ' target: ' + describe(t));
+        if (ham) { out('(hamburger)'); return; }
+        out('toggle: ' + describe(toggle));
+        out('peker Treff (elementsFromPoint, topp 6):');
+        if (document.elementsFromPoint) {
+          document.elementsFromPoint(x, y).slice(0, 6).forEach(function (el, i) {
+            out('  ' + i + ': ' + el.tagName + (typeof el.className === 'string' ? '.' + el.className.trim().split(/\s+/).slice(0, 4).join('.') : ''));
+          });
+        }
+        var cs = getComputedStyle(toggle);
+        out('toggle pointer-events: ' + cs.pointerEvents + ', display: ' + cs.display);
+        var li = toggle.closest('li');
+        setTimeout(function () {
+          out('etter 300ms: li = "' + (li ? li.className : '?') + '" | aria-expanded = ' + toggle.getAttribute('aria-expanded'));
+          var menu = li ? li.querySelector('.dropdown-menu') : null;
+          if (menu) {
+            var mcs = getComputedStyle(menu);
+            var r = menu.getBoundingClientRect();
+            out('meny: display=' + mcs.display + ', synlig h\u00f8yde=' + Math.round(r.height) + 'px, rect y=' + Math.round(r.top));
+          }
+        }, 300);
+      };
+    }
+
+    document.addEventListener('touchstart', handler('touchstart'), { capture: true, passive: true });
+    document.addEventListener('click', handler('click'), { capture: true });
+  })();
+</script>
