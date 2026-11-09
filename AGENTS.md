@@ -208,6 +208,17 @@ all verification via git history + post-push visual checks by user.
 - Edit tool often fails on CRLF files with "String not found" — use Python
   heredoc scripts for nav.html, oppdrag.html and other CRLF files (incl. all
   new medlemskap md files)
+- Mobile dropdowns (fixed 16f398d): Brave/Android on the homepage fired
+  touchstart on the dropdown toggle but the synthesized click Bootstrap's
+  data-api needs never arrived -> taps did nothing (programmatic click
+  worked). js/creative.js now toggles directly on touchend (10px movement
+  guard, preventDefault kills ghost click/href). nav.html <style> unclips
+  .navbar-fixed-top .navbar-collapse (BS3 340px no-scroll clip hid opened
+  dropdown items; now 70vh + overflow-y auto). Debug artifacts removed
+  (debug-tap include, navtest.html)
+- CACHE CONVENTION: local scripts + project.css load with ?v=YYYYMMDD;
+  BUMP the string on every JS/CSS fix (Fastly max-age=600, browser cache
+  otherwise serves old assets; 20261109 -> 20261110 at 16f398d)
 - Hash-arrival scroll (js/creative.js): target must be measured BEFORE
   `$('html, body').hide()` — hidden body reports offset().top = 0, which
   scrolled every subpage arrival to the top (fixed ef04fc3). Scroll re-runs
