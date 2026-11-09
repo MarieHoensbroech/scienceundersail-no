@@ -4,7 +4,7 @@ title: Accidental epiphytes
 subtitle: Vår første publiserte studie
 permalink: /ekspedisjoner/accidental-epiphytes/
 lang: nb
-header_image: fleet/accepi.jpeg
+header_image: fleet/accepi.jpg
 ---
 
 # Accidental epiphytes
